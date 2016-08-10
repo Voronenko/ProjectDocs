@@ -1,0 +1,54 @@
+/* Get rid of the huge margin below a <ul> inside of a table cell */
+.rst-content .section table td ol {
+    margin-bottom: 0px;
+}
+/* Get rid of the huge margin below a <ol> inside of a table cell */
+.rst-content .section table td ul {
+    margin-bottom: 0px;
+}
+
+
+/* Get rid of indent for line blocks */
+.rst-content .line-block {
+    margin-left: 0px;
+}
+
+
+/* In a layout of | th | td | td | the td cells are out of alignment
+ * with the th cell due to a custom padding-top for the td cells.
+ * Revert this. */
+.rst-content .section table td {
+    padding-top: 8px;
+}
+
+
+/* Increase padding for headers so that a long page is not squashed together.
+ */
+h2 {
+    padding-top: 1.5em;
+    padding-bottom: .2em;
+}
+h3 {
+    padding-top: 1em;
+    padding-bottom: .15em;
+}
+h4 {
+    padding-top: .5em;
+    padding-bottom: .125em;
+}
+
+
+/** Style blockquote's to make them stand out more from the body text. */
+.rst-content blockquote.epigraph {
+    border-left: 6px solid #ccc;
+    margin: 1.5em 10px;
+    margin-left: 0;
+    padding: .5em;
+    padding-left: 1em;
+    font-style: italic;
+    color: #555;
+}
+
+.rst-content blockquote.epigraph p {
+    margin-bottom: .6em;
+}

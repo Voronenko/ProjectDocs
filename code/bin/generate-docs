@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+
+# ADJUST PATH TO LIBRARIES
+import os
+import sys
+
+__repo_dir__ = os.path.join(os.path.abspath(__file__), '..', '..', '..')
+for __relpath__ in ['code/doc_generator', 'code', 'models']:
+    __pkg_path__ = os.path.normpath(os.path.join(__repo_dir__, __relpath__))
+    sys.path.append(__pkg_path__)
+
+# Continue with normal imports
+from master_generator import MasterGenerator
+
+
+class Program(object):
+    def __init__(self):
+        self.master = MasterGenerator()
+
+    def run(self):
+        self.master.generate_all()
+
+
+if __name__ == '__main__':
+    program = Program()
+    program.run()

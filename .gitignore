@@ -1,0 +1,13 @@
+*.pyc
+.cache
+*_generated.rst
+_buildinfo.txt
+*.tgz
+
+/p-env/
+docs/html/
+.idea
+.Python
+pip-selfcheck.json
+__pycache__
+.cache

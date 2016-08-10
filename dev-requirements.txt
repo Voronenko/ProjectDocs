@@ -1,0 +1,7 @@
+-r requirements.txt
+
+# testing tools
+nose
+mock
+coverage
+flake8
