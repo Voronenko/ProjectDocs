@@ -22,6 +22,7 @@ extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.doctest',
     'sphinx.ext.intersphinx', 'sphinx.ext.todo',
     'sphinx.ext.viewcode',
+    'sphinxcontrib.blockdiag', 'sphinxcontrib.actdiag', 'sphinxcontrib.seqdiag', 'sphinxcontrib.nwdiag', 'sphinxcontrib.rackdiag', 'sphinxcontrib.packetdiag',
     'cloud_sptheme.ext.table_styling',
 ]
 
