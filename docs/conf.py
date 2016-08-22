@@ -23,6 +23,8 @@ extensions = [
     'sphinx.ext.intersphinx', 'sphinx.ext.todo',
     'sphinx.ext.viewcode',
     'sphinxcontrib.blockdiag', 'sphinxcontrib.actdiag', 'sphinxcontrib.seqdiag', 'sphinxcontrib.nwdiag', 'sphinxcontrib.rackdiag', 'sphinxcontrib.packetdiag',
+# comment if you don't have in the system
+    'sphinxcontrib.plantuml',
     'cloud_sptheme.ext.table_styling',
 ]
 
