@@ -27,13 +27,13 @@ plantuml: docs/diagrams/*.plantuml
 
 
 sphinx-build: pip
-	@touch $@
+	@echo
 
 pip: python
 	pip install -r requirements.txt
 
 python:
-	@touch $@
+	@echo 
 
 clean: clean_generated
 	@rm -rf .Python p-env docs/html
