@@ -7,3 +7,6 @@ solution: sudo apt-get install libjpeg-dev
 useful tools 
 
 Formats convertor:  https://github.com/jgm/pandoc
+
+Online work pad for diagramming construction
+http://interactive.blockdiag.com/
