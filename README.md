@@ -10,3 +10,7 @@ Formats convertor:  https://github.com/jgm/pandoc
 
 Online work pad for diagramming construction
 http://interactive.blockdiag.com/
+
+Online work pad for UML diagrams construction
+
+http://plantuml.com/plantuml/uml/
