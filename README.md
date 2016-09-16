@@ -9,7 +9,7 @@ Most likely you are hitting:
 
 error  ValueError: --enable-jpeg requested but jpeg not found, aborting
 
-solution: sudo apt-get install libjpeg-dev
+solution: `sudo apt-get install libjpeg-dev`
 
 
 ### MacOS
