@@ -13,7 +13,7 @@ docs/html/index.html: README.rst docs/_static/css/* docs/_templates/* p-env/bin/
 
 docs_sources: docs/*.rst docs/project_specific/*.rst
 
-preprocess_sources: docs/project_specific/*.rst.jinja2 assets/*
+preprocess_sources: docs/project_specific/*.rst.jinja2
 	p-env/bin/python code/bin/generate-docs
 
 # NOTE: This requires you to have plantuml installed, so it's not hooked into

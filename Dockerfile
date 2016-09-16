@@ -13,7 +13,7 @@ RUN mkdir /graphviz && \
 
 RUN apk add --update curl && \
     mkdir -p /opt/plantuml/ && \
-    curl  https://sourceforge.net/projects/plantuml/files/plantuml.jar/download > /opt/plantuml/plantuml.jar && \
+    curl -L  https://sourceforge.net/projects/plantuml/files/plantuml.jar/download > /opt/plantuml/plantuml.jar && \
     rm -rf /var/cache/apk/*
 
 COPY docker/plantuml /usr/bin/plantuml

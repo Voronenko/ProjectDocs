@@ -9,6 +9,15 @@ Indices and tables
 * :ref:`search`
 
 
+Building docs
+=============
+
+.. toctree::
+
+    building_docs.rst
+
+
+
 
 Recent changes
 ==============
