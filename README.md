@@ -19,6 +19,12 @@ zlib not found or libjpeg not found
 solution: install dev packages using `xcode-select --install`  ,
 install jpeg-devel using `brew install libjpeg`
 
+### Other clues
+
+Take a look on  https://github.com/Voronenko/projectdocs/blob/master/Dockerfile
+it has listed all binary packages required. Check you have all of them or alternatives.
+
+
 useful tools 
 ============
 
