@@ -53,7 +53,7 @@ Result will be produced in docs/html
 docker setup
 ------------
 
-You need to have docker installed
+You need to have docker installed. File ./docker_build.sh does similar task as clean_build.sh
 
 ```
 
