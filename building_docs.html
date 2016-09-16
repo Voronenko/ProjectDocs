@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PROJECT Development Documentation &mdash; PROJECT NAME 1.0 documentation</title>
+  <title>Building docs project &mdash; PROJECT NAME 1.0 documentation</title>
   
 
   
@@ -34,8 +34,9 @@
   
 
   
-    <link rel="top" title="PROJECT NAME 1.0 documentation" href="#"/>
-        <link rel="next" title="Building docs project" href="building_docs.html"/> 
+    <link rel="top" title="PROJECT NAME 1.0 documentation" href="index.html"/>
+        <link rel="next" title="PROJECT" href="project_specific/index.html"/>
+        <link rel="prev" title="PROJECT Development Documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -53,7 +54,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> PROJECT NAME
+            <a href="index.html" class="icon icon-home"> PROJECT NAME
           
 
           
@@ -84,8 +85,15 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="building_docs.html">Building docs project</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Building docs project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#local-setup">local setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-local-build">running the local build</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-setup">docker setup</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="project_specific/index.html">PROJECT</a></li>
@@ -103,7 +111,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">PROJECT NAME</a>
+        <a href="index.html">PROJECT NAME</a>
       </nav>
 
 
@@ -118,13 +126,13 @@
 
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
+    <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>PROJECT Development Documentation</li>
+    <li>Building docs project</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/building_docs.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -134,44 +142,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="project-development-documentation">
-<h1>PROJECT Development Documentation<a class="headerlink" href="#project-development-documentation" title="Permalink to this headline">¶</a></h1>
-<p>This is developer documentation for working on PROJECT</p>
-<p>The latest version is available on: <a class="reference external" href="http://XXX">http://XXX</a></p>
-<div class="section" id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="building-docs-project">
+<h1>Building docs project<a class="headerlink" href="#building-docs-project" title="Permalink to this headline">¶</a></h1>
+<p>You have two options:</p>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+<li>build locally with diagramming software installed separately</li>
+<li>using dockerized image</li>
 </ul>
+<div class="section" id="local-setup">
+<h2>local setup<a class="headerlink" href="#local-setup" title="Permalink to this headline">¶</a></h2>
+<p>You would need:</p>
+<p>number of languages:</p>
+<ul class="simple">
+<li>python 2.7 , virtualenv, make</li>
+<li>java 6-7-8 for plantUML</li>
+</ul>
+<p>diagramming software</p>
+<ul class="simple">
+<li>plantUML (<a class="reference external" href="http://plantuml.com/">http://plantuml.com/</a> , recipe <a class="reference external" href="https://github.com/Voronenko/ansible-developer_recipes/blob/master/tools/tasks_plantuml.yml">https://github.com/Voronenko/ansible-developer_recipes/blob/master/tools/tasks_plantuml.yml</a>)</li>
+<li>blockdiag (<a class="reference external" href="http://blockdiag.com/en/">http://blockdiag.com/en/</a> , installed via requirements.txt)</li>
+</ul>
+<div class="section" id="running-the-local-build">
+<h3>running the local build<a class="headerlink" href="#running-the-local-build" title="Permalink to this headline">¶</a></h3>
+<p>At this moment it is enough to run ./clean_build.sh
+Result will be produced in docs/html</p>
 </div>
-<div class="section" id="building-docs">
-<h2>Building docs<a class="headerlink" href="#building-docs" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="building_docs.html">Building docs project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="building_docs.html#local-setup">local setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="building_docs.html#running-the-local-build">running the local build</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="building_docs.html#docker-setup">docker setup</a></li>
-</ul>
-</li>
-</ul>
 </div>
-</div>
-<div class="section" id="recent-changes">
-<h2>Recent changes<a class="headerlink" href="#recent-changes" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="project_specific/index.html">PROJECT</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="project_specific/page.html">Page</a></li>
-<li class="toctree-l2"><a class="reference internal" href="project_specific/test_page_generated.html">You can use python jinja2 template formatter to generate pages</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">Recent Changes</a></li>
-</ul>
+<div class="section" id="docker-setup">
+<h2>docker setup<a class="headerlink" href="#docker-setup" title="Permalink to this headline">¶</a></h2>
+<p>You need to have docker installed</p>
+<div class="highlight-shell"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+
+docker create -it -v <span class="nv">$PWD</span>:/opt/sphinxproject --name projectdocs softasap/sphinx:latest bash
+
+<span class="c"># Now start it.</span>
+docker start projectdocs
+
+docker <span class="nb">exec</span> -it projectdocs <span class="s2">&quot;cd /opt/sphinxproject &amp;&amp; make --makefile Makefiledck&quot;</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -183,8 +191,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="building_docs.html" class="btn btn-neutral float-right" title="Building docs project" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="project_specific/index.html" class="btn btn-neutral float-right" title="PROJECT" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="index.html" class="btn btn-neutral" title="PROJECT Development Documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
