@@ -1,9 +1,23 @@
 Known issues:
 =============
 
-ubuntu 14.04, error  ValueError: --enable-jpeg requested but jpeg not found, aborting
+## "BlockDiag not found"
+
+Most likely you are hitting:
+
+### ubuntu 14.04, 
+
+error  ValueError: --enable-jpeg requested but jpeg not found, aborting
+
 solution: sudo apt-get install libjpeg-dev
 
+
+### MacOS
+
+zlib not found or libjpeg not found
+
+solution: install dev packages using `xcode-select --install`  ,
+install jpeg-devel using `brew install libjpeg`
 
 useful tools 
 ============
