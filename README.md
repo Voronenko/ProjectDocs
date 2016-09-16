@@ -55,7 +55,7 @@ docker setup
 
 You need to have docker installed
 
-.. code-block:: shell
+```
 
   #!/bin/bash
 
@@ -65,3 +65,4 @@ You need to have docker installed
   docker start projectdocs
 
   docker exec -it projectdocs "cd /opt/sphinxproject && make --makefile Makefiledck"
+```
