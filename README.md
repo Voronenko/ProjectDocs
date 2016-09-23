@@ -30,12 +30,37 @@ useful tools
 
 Formats convertor:  https://github.com/jgm/pandoc
 
+Example, to convert docs artifact:
+
+```
+
+pandoc -s flow.docx -t rst -o product_flow.rst
+
+```
+
 Online work pad for diagramming construction
 http://interactive.blockdiag.com/
 
 Online work pad for UML diagrams construction
 
 http://plantuml.com/plantuml/uml/
+
+
+Generate pgsql schema diagram with schemacrawler  http://sualeh.github.io/SchemaCrawler/ , example:
+
+```
+
+schemacrawler -server=postgresql -database=demo_test -user=postgres -password=postgres -infolevel=maximum -command=graph -outputformat=pdf -outputfile=database-diagram.pdf
+
+```
+
+Generate pgsql schema diagram portal with schemaspy http://schemaspy.sourceforge.net/ , example:
+
+```
+schemaspy -t pgsql -db demo_test -host localhost -port 5432 -s public -u postgres -p postgres  -o output
+```
+
+
 
 Building docs project
 =====================
