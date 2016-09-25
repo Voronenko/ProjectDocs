@@ -1,7 +1,10 @@
-====
-Page
-====
+=======================
+Page element's examples
+=======================
 
+
+Blockdiag - block diagram
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. blockdiag::
    :desctable:
@@ -14,7 +17,8 @@ Page
    }
 
 
-
+Seqdiag - sequence diagram
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. seqdiag::
@@ -28,6 +32,8 @@ Page
    }
 
 
+Actdiag - activity diagrams
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. actdiag::
    :desctable:
@@ -40,6 +46,8 @@ Page
    }
 
 
+nwdiag - network diagram
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. nwdiag::
    :desctable:
@@ -55,6 +63,9 @@ Page
       }
    }
 
+
+Plantuml
+~~~~~~~~
 
 .. uml::
 
@@ -77,6 +88,8 @@ Page
    @enduml
 
 
+Plantuml - class diagrams
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. uml::
@@ -218,93 +231,96 @@ To declare fields and methods, you can use the symbol ”:” followed by the fi
       @enduml
 
 
+Plantuml - usecase diagram
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. uml::
 
    @startuml
    actor "Main Database" as DB << Application >>
-   
+
    note left of DB
-      This actor 
+      This actor
       has a "name with spaces",
       an alias
-      and a stereotype 
+      and a stereotype
    end note
-   
+
    actor User << Human >>
    actor SpecialisedUser
    actor Administrator
-   
+
    User <|--- SpecialisedUser
    User <|--- Administrator
-   
+
    usecase (Use the application) as (Use) << Main >>
    usecase (Configure the application) as (Config)
    Use ..> Config : <<includes>>
-   
+
    User --> Use
    DB --> Use
-   
-   Administrator --> Config 
-   
+
+   Administrator --> Config
+
    note "This note applies to\nboth actors." as MyNote
    MyNote .. Administrator
    MyNote .. SpecialisedUser
-   
+
    '  this is a text comment and won't be displayed
    AnotherActor ---> (AnotherUseCase)
-   
+
    '  to increase the length of the edges, just add extras dashes, like this:
    ThirdActor ----> (LowerCase)
-   
+
    '  The direction of the edge can also be reversed, like this:
    (UpperCase) <---- FourthActor
-   
+
    @enduml
 
 
-
+Plantuml - activity diagram
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. uml::
 
    @startuml
-   
+
    start
-   
+
    :first activity;
-   
+
    :second activity
-    with a multiline 
+    with a multiline
     and rather long description;
-   
+
    :another activity;
-   
+
    note right
      After this activity,
-     are two 'if-then-else' examples. 
+     are two 'if-then-else' examples.
    end note
-   
+
    if (do optional activity?) then (yes)
       :optional activity;
    else (no)
-   
+
       if (want to exit?) then (right now!)
          stop
       else (not really)
-      
+
       endif
-   
-   endif   
-      
+
+   endif
+
    :third activity;
-   
+
    note left
      After this activity,
-     parallel activities will occur. 
+     parallel activities will occur.
    end note
-   
+
    fork
       :Concurrent activity A;
    fork again
@@ -318,42 +334,43 @@ To declare fields and methods, you can use the symbol ”:” followed by the fi
       :Nested C2;
       end fork
    end fork
-   
-   repeat 
+
+   repeat
       :repetitive activity;
    repeat while (again?)
-   
+
    while (continue?) is (yes, of course)
      :first activity inside the while loop;
      :second activity inside the while loop;
    endwhile (no)
-   
+
    stop
-   
+
    @enduml
 
 
-
+Plantuml - state diagram
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. uml::
 
    @startuml
-   
+
    [*] --> MyState
    MyState --> CompositeState
    MyState --> AnotherCompositeState
    MyState --> WrongState
-   
-   CompositeState --> CompositeState : \ this is a loop   
+
+   CompositeState --> CompositeState : \ this is a loop
    AnotherCompositeState --> [*]
    CompositeState --> [*]
-   
+
    MyState : this is a string
    MyState : this is another string
-   
+
    state CompositeState {
-   
+
    [*] --> StateA : begin something
    StateA --> StateB : from A to B
    StateB --> StateA : from B back to A
@@ -363,28 +380,29 @@ To declare fields and methods, you can use the symbol ”:” followed by the fi
    }
 
    state AnotherCompositeState {
-   
-   [*] --> ConcurrentStateA    
-   ConcurrentStateA --> ConcurrentStateA 
-   
+
+   [*] --> ConcurrentStateA
+   ConcurrentStateA --> ConcurrentStateA
+
    --
-   
+
    [*] --> ConcurrentStateB
    ConcurrentStateB --> ConcurrentStateC
    ConcurrentStateC --> ConcurrentStateB
    }
-      
+
    note left of WrongState
-      This state 
+      This state
       is a dead-end
       and shouldn't
       exist.
    end note
-   
+
    @enduml
 
 
-
+Plantuml - UI example
+~~~~~~~~~~~~~~~~~~~~~
 
 .. uml::
 
@@ -401,7 +419,3 @@ To declare fields and methods, you can use the symbol ”:” followed by the fi
      ^This is a droplist^
    }
    @enduml
-
-
-
-
