@@ -1,0 +1,33 @@
+image: softasap/sphinx-projectdocs:latest
+
+#build:
+#  stage: build
+#  script:
+#    - echo "====> $CI_PROJECT_ID"
+#    - make --makefile Makefiledck
+#    - ./package.sh
+#  artifacts:
+#    expire_in: 1 day
+#    paths:
+#      - docs*.tgz
+#      - unpackage.sh
+
+pages:
+  script:
+  - make --makefile Makefiledck
+  artifacts:
+    expire_in: 1 day
+    paths:
+    - docs/html
+  only:
+  - master
+
+
+#deploy:
+#  stage: deploy
+#  image: softasap/alpine:full
+#  script:
+#    - echo "Deploying"
+#    - "cd ${CI_PROJECT_DIR}/deployment && ./gitlab-deploy.sh"
+#  only:
+#  - master

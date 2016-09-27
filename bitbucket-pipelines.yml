@@ -1,0 +1,7 @@
+image: softasap/sphinx-projectdocs:latest
+pipelines:
+  default:
+    - step:
+        script:
+          - echo "This script runs on all branches that don't have any specific pipeline assigned in 'branches'."
+          - make --makefile Makefiledck
