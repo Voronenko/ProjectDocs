@@ -1,0 +1,33 @@
+server {
+
+  {% if item.nginx.app_domain|default(False) %}
+  listen 80;
+  server_name {{item.nginx.app_domain}};
+  {% else %}
+  listen 81 default_server;
+  {% endif %}
+  charset utf-8;
+
+  root {{item.nginx.root}};
+
+  proxy_intercept_errors on;
+
+  # opt-in to the future
+  add_header "X-UA-Compatible" "IE=Edge,chrome=1";
+
+	location / {
+		# if you're just using wordpress and don't want extra rewrites
+		# then replace the word @rewrites with /index.php
+		try_files $uri $uri/ @rewrites;
+                auth_basic "Restricted Content";
+                auth_basic_user_file /etc/nginx/docsprojecthtdocs;
+	}
+
+	location @rewrites {
+		# Can put some of your own rewrite rules in here
+		# for example rewrite ^/~(.*)/(.*)/? /users/$1/$2 last;
+		# If nothing matches we'll just send it to /index.php
+		# rewrite ^ /index.php last;
+	}
+
+}

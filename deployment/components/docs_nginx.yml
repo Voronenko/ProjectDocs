@@ -1,0 +1,34 @@
+---
+
+  - action: apt pkg=python-passlib state=latest install_recommends=yes
+    become: yes
+
+  - name: Nginx | configure basic auth
+    htpasswd: path=/etc/nginx/docsprojecthtdocs name=devdocs password=uxi3MsEr7lr3hIsxX3yw owner=root group=www-data mode=0644
+    become: yes
+
+  - name: Nginx | configure web startup
+    template: src="{{root_dir}}/components/templates/nginx/site.conf.j2" dest="/etc/nginx/sites-available/{{item.nginx.name}}.conf"
+    when: item.nginx is defined and item.nginx.template is not defined
+    with_items: "{{ project_sites }}"
+    become: yes
+    tags:
+      - create
+      - update
+
+
+  - name: Nginx | Enable sites
+    command: ln -fs /etc/nginx/sites-available/{{item.nginx.name}}.conf /etc/nginx/sites-enabled/{{item.nginx.name}}.conf creates=/etc/nginx/sites-enabled/{{item.nginx.name}}.conf
+    when: item.nginx is defined and item.nginx.template is not defined
+    with_items: "{{ project_sites }}"
+    become: yes
+    tags:
+      - create
+      - update
+
+  - name: Nginx | Restart
+    service: name="nginx" state=restarted
+    become: yes
+    tags:
+      - create
+      - update

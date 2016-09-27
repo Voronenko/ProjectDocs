@@ -1,0 +1,64 @@
+#!/bin/bash
+# credits https://gitlab.com/morph027/gitlab-ci-helpers/blob/master/get-last-successful-build-artifact.sh
+
+# don't forget to send ref
+# BASE_URL={{ lookup('env','BASE_URL')}}
+# PRIVATE_TOKEN={{ lookup('env','PRIVATE_TOKEN')}}
+# STAGE={{ lookup('env','STAGE')}}
+# PROJECT={{ lookup('env','PROJECT')}}
+# REF={{ lookup('env','REF')}}
+# OUT_FILE={{ lookup('env','OUTFILE')}}
+
+printenv > env.log
+
+check_vars() {
+  for VAR in ${VARS[@]}
+  do
+    if [ -z ${!VAR} ]; then echo "\$${VAR} is missing"; exit 1; fi
+  done
+}
+
+check_files() {
+  for REQ in ${REQS[@]}
+  do
+    which ${REQ} >/dev/null
+    if [ ! $? -eq 0 ]; then
+      echo "requirement ${REQ} is missing"
+      exit 1
+    fi
+  done
+}
+
+download_latest() {
+  [ -z $OUT_FILE ] && OUT_FILE="artifacts.zip"
+  echo  curl -s -o ${OUT_FILE} -H "PRIVATE-TOKEN: ${PRIVATE_TOKEN}" "${BASE_URL}/api/v3/projects/${PROJECT}/builds/${LAST_SUCCESSFUL_BUILD}/artifacts"
+  curl -s -o ${OUT_FILE} -H "PRIVATE-TOKEN: ${PRIVATE_TOKEN}" "${BASE_URL}/api/v3/projects/${PROJECT}/builds/${LAST_SUCCESSFUL_BUILD}/artifacts"
+}
+
+
+# check requirements
+REQS=( curl jq )
+check_files
+
+# set vars in project settings
+# grab project id with:
+# curl -s -H "PRIVATE-TOKEN: $PRIVATE-TOKEN" "${BASEURL}/api/v3/projects" | jq .
+VARS=( BASE_URL PRIVATE_TOKEN PROJECT STAGE REF)
+
+check_vars
+
+echo curl -s -H "PRIVATE-TOKEN: ${PRIVATE_TOKEN}" "${BASE_URL}/api/v3/projects/${PROJECT}/builds?per_page=${PER_PAGE:-50}"
+# fetch last successful build
+echo LAST_SUCCESSFUL_BUILD curl -s -H "PRIVATE-TOKEN: ${PRIVATE_TOKEN}" "${BASE_URL}/api/v3/projects/${PROJECT}/builds?per_page=${PER_PAGE:-50}" | jq -c '.[] | select(.status=="success")  | select(.stage=="'${STAGE}'") | select(.ref=="'${REF:-master}'") | {id}' | head -n1 | grep -oE '[0-9]+'
+LAST_SUCCESSFUL_BUILD=$(curl -s --header "PRIVATE-TOKEN: ${PRIVATE_TOKEN}" "${BASE_URL}/api/v3/projects/${PROJECT}/builds?per_page=${PER_PAGE:-50}" | jq -c '.[] | select(.status=="success")  | select(.stage=="'${STAGE}'") | select(.ref=="'${REF:-master}'") | {id}' | head -n1 | grep -oE '[0-9]+')
+
+if [ -z $LAST_SUCCESSFUL_BUILD ]
+then
+  echo Failed to locate last successful build
+  exit 1
+fi
+
+echo Located: $LAST_SUCCESSFUL_BUILD , downloading:
+
+# download
+download_latest

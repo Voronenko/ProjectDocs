@@ -1,0 +1,32 @@
+---
+
+  install_dir: /var/www/project_docs
+
+  deploy_user: "{{ansible_user_id}}"
+
+#  Uncomment for jenkins based deploy
+#  jenkins_user: SET EXTERNALLY
+#  jenkins_password: SET EXTERNALLY
+#  artifact_version: SET EXTERNALLY
+#  artifact_name: "projectdocs-{{artifact_version}}.tgz"
+#  artifact_url: "https://cd.companyname.local/job/project-docs-build/lastSuccessfulBuild/artifact/{{artifact_name}}"
+
+
+# uncomment for gitlab based deploy
+#   gitlabbaseurl: https://companyname.githost.io
+#   gitlabtoken: SET EXTERNALLY
+
+  project_docs: {
+      name: docs,
+# uncomment for gitlab based deploy
+#      gitlabproject: 18,
+#      gitlabstage: build,
+      nginx: {
+        name: "docs",
+        root: "{{install_dir}}/docs/build",
+        app_domain: "docs.companyname.local"
+        }
+    }
+
+  project_sites:
+    - "{{project_docs}}"

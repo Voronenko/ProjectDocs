@@ -1,0 +1,30 @@
+---
+  - name: Project Docs Deploy | Purge base dir
+    file: path="{{install_dir}}" state=absent  
+    become: yes
+    tags:
+      - update
+
+  - name: Project Docs Deploy | configure base dir
+    file: path="{{install_dir}}" state=directory  mode="u=rwx,g=rx,o=rx" owner="{{ansible_user_id}}" group="www-data"
+    become: yes
+    tags:
+      - update
+
+  - name: Project Docs Deploy | configure www dir
+    file: path="{{project_docs.nginx.root}}" state=directory  mode="u=rwx,g=rx,o=rx" owner="{{ansible_user_id}}" group="www-data"
+    become: yes
+    tags:
+      - update
+
+  - name: Project Docs Deploy | Fetch distribution from jenkins
+    shell: "curl -k -u {{jenkins_user}}:{{jenkins_password}} {{artifact_url}} > {{artifact_name}}"
+    args:
+      chdir: "{{install_dir}}"
+    tags:
+      - update
+
+  - name: Project Docs Deploy | Unpack distribution
+    unarchive: src={{install_dir}}/{{artifact_name}} dest={{project_docs.nginx.root}} copy=no
+    tags:
+      - update
