@@ -1,10 +1,12 @@
-=======================
-Page element's examples
-=======================
+============================
+Creating diagrams in Sphinx
+============================
 
 
 Blockdiag - block diagram
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. begin-blockdiag-example
 
 .. blockdiag::
    :desctable:
@@ -16,10 +18,19 @@ Blockdiag - block diagram
       C [description = "database server"];
    }
 
+.. end-blockdiag-example
+
+This is the code for the example above:
+
+.. literalinclude:: page.rst
+  :language: rst
+  :start-after: begin-blockdiag-example
+  :end-before: end-blockdiag-example
 
 Seqdiag - sequence diagram
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. begin-seqdiag-example
 
 .. seqdiag::
    :desctable:
@@ -31,9 +42,20 @@ Seqdiag - sequence diagram
       C [description = "database server"];
    }
 
+.. end-seqdiag-example
+
+This is the code for the example above:
+
+.. literalinclude:: page.rst
+   :language: rst
+   :start-after: begin-seqdiag-example
+   :end-before: end-seqdiag-example
+
 
 Actdiag - activity diagrams
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. begin-actdiag-example
 
 .. actdiag::
    :desctable:
@@ -45,9 +67,19 @@ Actdiag - activity diagrams
       C [description = "database server"];
    }
 
+.. end-actdiag-example
+
+.. literalinclude:: page.rst
+   :language: rst
+   :start-after: begin-actdiag-example
+   :end-before: end-actdiag-example
+
+
 
 nwdiag - network diagram
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. begin-nwdiag-example
 
 .. nwdiag::
    :desctable:
@@ -63,9 +95,18 @@ nwdiag - network diagram
       }
    }
 
+.. end-nwdiag-example
+
+.. literalinclude:: page.rst
+   :language: rst
+   :start-after: begin-nwdiag-example
+   :end-before: end-nwdiag-example
+
 
 Plantuml
 ~~~~~~~~
+
+.. begin-plantuml-intro-example
 
 .. uml::
 
@@ -77,8 +118,15 @@ Plantuml
    end note
    @enduml
 
+.. end-plantuml-intro-example
+
+.. literalinclude:: page.rst
+ :language: rst
+ :start-after: begin-plantuml-intro-example
+ :end-before: end-plantuml-intro-example
 
 
+.. begin-plantuml-basic-example
 
 .. uml::
 
@@ -86,6 +134,14 @@ Plantuml
    Alice -> Bob: Hi!
    Alice <- Bob: How are you?
    @enduml
+
+
+.. end-plantuml-basic-example
+
+.. literalinclude:: page.rst
+  :language: rst
+  :start-after: begin-plantuml-basic-example
+  :end-before: end-plantuml-basic-example
 
 
 Plantuml - class diagrams
@@ -157,6 +213,9 @@ Plantuml - class diagrams
 
 
 To declare fields and methods, you can use the symbol ”:” followed by the field’s or method’s name. The system checks for parenthesis to choose between methods and fields.
+
+
+.. begin-plantuml-class-example
 
 .. uml::
 
@@ -231,9 +290,19 @@ To declare fields and methods, you can use the symbol ”:” followed by the fi
       @enduml
 
 
+.. end-plantuml-class-example
+
+.. literalinclude:: page.rst
+  :language: rst
+  :start-after: begin-plantuml-class-example
+  :end-before: end-plantuml-class-example
+
+
+
 Plantuml - usecase diagram
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. begin-plantuml-usecase-example
 
 .. uml::
 
@@ -278,10 +347,19 @@ Plantuml - usecase diagram
 
    @enduml
 
+.. end-plantuml-usecase-example
+
+.. literalinclude:: page.rst
+ :language: rst
+ :start-after: begin-plantuml-usecase-example
+ :end-before: end-plantuml-usecase-example
+
+
 
 Plantuml - activity diagram
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. begin-plantuml-activity-example
 
 .. uml::
 
@@ -348,10 +426,19 @@ Plantuml - activity diagram
 
    @enduml
 
+.. end-plantuml-activity-example
+
+.. literalinclude:: page.rst
+  :language: rst
+  :start-after: begin-plantuml-activity-example
+  :end-before: end-plantuml-activity-example
+
+
 
 Plantuml - state diagram
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. begin-plantuml-state-example
 
 .. uml::
 
@@ -400,9 +487,18 @@ Plantuml - state diagram
 
    @enduml
 
+.. end-plantuml-state-example
+
+.. literalinclude:: page.rst
+  :language: rst
+  :start-after: begin-plantuml-state-example
+  :end-before: end-plantuml-state-example
+
 
 Plantuml - UI example
 ~~~~~~~~~~~~~~~~~~~~~
+
+.. begin-plantuml-ui-example
 
 .. uml::
 
@@ -419,3 +515,10 @@ Plantuml - UI example
      ^This is a droplist^
    }
    @enduml
+
+.. end-plantuml-ui-example
+
+.. literalinclude:: page.rst
+  :language: rst
+  :start-after: begin-plantuml-ui-example
+  :end-before: end-plantuml-ui-example

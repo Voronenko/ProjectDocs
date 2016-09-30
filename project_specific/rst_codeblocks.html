@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Codeblock’s examples &mdash; PROJECT NAME 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/table_styling.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/project_mods.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="PROJECT NAME 1.0 documentation" href="../index.html"/>
+        <link rel="up" title="PROJECT" href="index.html"/>
+        <link rel="next" title="Creating diagrams in Sphinx" href="page.html"/>
+        <link rel="prev" title="Sphinx’s reStructuredText markup" href="rst_general_markup.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../building_docs.html">Building docs project</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">PROJECT</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#using-the-sphinx-itself">Using the sphinx itself</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="rst_general_markup.html">Sphinx&#8217;s reStructuredText markup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Codeblock&#8217;s examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#using-highlight-directive">Using highlight directive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-code-block">Using code-block</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="page.html">Creating diagrams in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_page_generated.html">You can use python jinja2 template formatter to generate pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Recent Changes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">PROJECT NAME</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">PROJECT</a> &raquo;</li>
+      
+    <li>Codeblock&#8217;s examples</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/project_specific/rst_codeblocks.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="codeblock-s-examples">
+<h1>Codeblock&#8217;s examples<a class="headerlink" href="#codeblock-s-examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-highlight-directive">
+<h2>Using highlight directive<a class="headerlink" href="#using-highlight-directive" title="Permalink to this headline">¶</a></h2>
+<p>The literal blocks are now highlighted as HTML, until a new directive is found.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>&lt;html&gt;&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;This is a text.&lt;/body&gt;
+&lt;/html&gt;</dd>
+</dl>
+<p>The following directive changes the hightlight language to SQL.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>SELECT * FROM mytable</dd>
+</dl>
+<p>From here on no highlighting will be done.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>SELECT * FROM mytable</dd>
+</dl>
+</div>
+<div class="section" id="using-code-block">
+<h2>Using code-block<a class="headerlink" href="#using-code-block" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sql-structured-query-language">
+<h3>sql - Structured Query Language<a class="headerlink" href="#sql-structured-query-language" title="Permalink to this headline">¶</a></h3>
+<p>The following is a SQL statement.</p>
+<div class="highlight-sql"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mytable</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="postgresql-postgresql-dialect-of-sql">
+<h3>PostgreSQL - PostgreSQL dialect of SQL<a class="headerlink" href="#postgresql-postgresql-dialect-of-sql" title="Permalink to this headline">¶</a></h3>
+<p>The following is a PostgreSQL statement.</p>
+<div class="highlight-postgresql"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">SELECT</span> <span class="k">name</span> <span class="k">FROM</span> <span class="n">employee</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">id</span> <span class="k">FROM</span> <span class="n">job</span> <span class="k">WHERE</span> <span class="n">title</span> <span class="o">~</span> <span class="s1">&#39;^[A-E]&#39;</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="rst-restructured-text">
+<h3>RST - ReStructured Text<a class="headerlink" href="#rst-restructured-text" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> postgresql
+  <span class="nc">:linenos:</span>
+
+  SELECT name FROM employee WHERE id IN (SELECT id FROM job WHERE title ~ &#39;^[A-E]&#39;);
+</pre></div>
+</div>
+</div>
+<div class="section" id="bat-dos-windows-batch-file">
+<h3>bat - DOS/Windows batch file<a class="headerlink" href="#bat-dos-windows-batch-file" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bat"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span class="p">@</span><span class="k">ECHO</span> <span class="k">OFF</span>
+<span class="c">:: Check for NT4 or later</span>
+<span class="k">IF</span> NOT <span class="s2">&quot;%OS%&quot;</span><span class="o">==</span><span class="s2">&quot;Windows_NT&quot;</span> <span class="k">GOTO</span> <span class="nl">Syntax</span>
+<span class="c">:: Check for XP or later</span>
+<span class="k">FOR</span> <span class="n">/F</span> <span class="s2">&quot;tokens=2 delims=[]&quot;</span> <span class="nv">%%A</span> IN (<span class="s1">&#39;VER&#39;</span>) <span class="k">DO</span> <span class="k">FOR</span> <span class="n">/F</span> <span class="s2">&quot;tokens=2&quot;</span> <span class="nv">%%B</span> IN (<span class="s2">&quot;%%~A&quot;</span>) <span class="k">DO</span> <span class="k">IF</span> <span class="nv">%%B</span> <span class="o">LSS</span> <span class="m">5</span>.<span class="m">1</span> <span class="k">GOTO</span> <span class="nl">Syntax</span>
+
+<span class="c">:: Check command line argument</span>
+<span class="k">IF</span>     <span class="s2">&quot;%~1&quot;</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="k">GOTO</span> <span class="nl">Syntax</span>
+<span class="k">IF</span> NOT <span class="s2">&quot;%~2&quot;</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="k">IF</span> <span class="n">/I</span> NOT <span class="s2">&quot;%~2&quot;</span><span class="o">==</span><span class="s2">&quot;/A&quot;</span> <span class="k">GOTO</span> <span class="nl">Syntax</span>
+<span class="k">ECHO</span>.<span class="nv">%1</span> <span class="p">|</span> <span class="n">FINDSTR</span> <span class="n">/R</span> <span class="n">/C:&quot;[:\\\*\?,;/]&quot;</span> <span class="p">&gt;</span><span class="n">NUL</span> &amp;&amp; <span class="k">GOTO</span> <span class="nl">Syntax</span>
+
+<span class="c">:: If the specified command contains a dot, it is not a macro nor an internal command</span>
+<span class="k">ECHO</span>.<span class="nv">%1</span> <span class="p">|</span> <span class="n">FIND</span> <span class="s2">&quot;.&quot;</span> <span class="p">&gt;</span><span class="n">NUL</span> &amp;&amp; <span class="k">GOTO</span> <span class="nl">ExtCmd</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="powershell-windows-powershell">
+<h3>powershell - Windows PowerShell<a class="headerlink" href="#powershell-windows-powershell" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-powershell"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># PowerShell example to find Windows log files</span>
+<span class="nb">Clear-Host</span>
+<span class="nv">$Directory</span> <span class="p">=</span> <span class="s2">&quot;C:\Windows\&quot;</span>
+<span class="nv">$Files</span> <span class="p">=</span> <span class="nb">Get-Childitem</span> <span class="nv">$Directory</span> <span class="n">-recurse</span> <span class="n">-Include</span> <span class="p">*.</span><span class="n">log</span> <span class="p">`</span>
+<span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="bash-bash-shell-scripts">
+<h3>bash - Bash shell scripts<a class="headerlink" href="#bash-bash-shell-scripts" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+
+<span class="nb">set</span> -e
+
+make
+</pre></div>
+</td></tr></table></div>
+<hr class="docutils" />
+<p>Standard reST literal blocks are started by <code class="docutils literal"><span class="pre">::</span></code>
+at the end of the preceding paragraph and delimited by indentation.</p>
+<div class="section" id="highlight-directive">
+<h4>Highlight directive<a class="headerlink" href="#highlight-directive" title="Permalink to this headline">¶</a></h4>
+<p>The default highlighting language is Python:
+it can be be changed using the <code class="docutils literal"><span class="pre">highlight</span></code> directive
+within a document:</p>
+<div class="highlight-none"><div class="highlight"><pre>.. highlight:: html
+
+The literal blocks are now highlighted as HTML, until a new directive is found.
+
+::
+   &lt;html&gt;&lt;head&gt;&lt;/head&gt;
+   &lt;body&gt;This is a text.&lt;/body&gt;
+   &lt;/html&gt;
+
+The following directive changes the hightlight language to SQL.
+
+.. highlight:: sql
+
+::
+   SELECT * FROM mytable
+
+.. highlight:: none
+
+From here on no highlighting will be done.
+
+::
+   SELECT * FROM mytable
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-block-directive">
+<h4>Code-block directive<a class="headerlink" href="#code-block-directive" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal"><span class="pre">code-block</span></code> directive can be used to declare the specific language
+to be used in a block, regardless of the highlighting language:</p>
+<div class="highlight-none"><div class="highlight"><pre>The following is a SQL statement.
+
+.. code-block:: sql
+   :linenos:
+
+   SELECT * FROM mytable
+</pre></div>
+</div>
+<p>Line numbers are useful for long blocks such as this one:</p>
+<div class="highlight-postgresql"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">-- http://www.postgresonline.com/journal/index.php?/archives/97-SQL-Coding-Standards-To-Each-His-Own-Part-II.html</span>
+<span class="k">SELECT</span> <span class="n">persons</span><span class="mf">.</span><span class="n">id</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">forums</span><span class="mf">.</span><span class="n">category</span><span class="p">,</span>
+   <span class="n">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="n">posts</span><span class="mf">.</span><span class="n">id</span><span class="p">)</span> <span class="k">as</span> <span class="n">num_posts</span><span class="p">,</span>
+   <span class="k">COALESCE</span><span class="p">(</span><span class="n">MAX</span><span class="p">(</span><span class="k">comments</span><span class="mf">.</span><span class="n">rating</span><span class="p">),</span> <span class="mf">0</span><span class="p">)</span> <span class="k">AS</span> <span class="n">highest_rating</span><span class="p">,</span>
+   <span class="k">COALESCE</span><span class="p">(</span><span class="n">MIN</span><span class="p">(</span><span class="k">comments</span><span class="mf">.</span><span class="n">rating</span><span class="p">),</span> <span class="mf">0</span><span class="p">)</span> <span class="k">AS</span> <span class="n">lowest_rating</span>
+<span class="k">FROM</span> <span class="n">persons</span> <span class="k">JOIN</span> <span class="n">posts</span> <span class="k">ON</span> <span class="n">persons</span><span class="mf">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">posts</span><span class="mf">.</span><span class="n">author</span>
+   <span class="k">JOIN</span> <span class="n">forums</span> <span class="k">on</span> <span class="n">posts</span><span class="mf">.</span><span class="n">forum</span> <span class="o">=</span> <span class="n">forums</span><span class="mf">.</span><span class="n">id</span>
+   <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="k">comments</span> <span class="k">ON</span> <span class="n">posts</span><span class="mf">.</span><span class="n">id</span> <span class="o">=</span> <span class="k">comments</span><span class="mf">.</span><span class="n">post</span>
+<span class="k">WHERE</span> <span class="n">persons</span><span class="mf">.</span><span class="n">status</span> <span class="o">&gt;</span> <span class="mf">0</span>
+   <span class="k">AND</span> <span class="n">forums</span><span class="mf">.</span><span class="n">ratings</span> <span class="o">=</span> <span class="k">TRUE</span>
+   <span class="k">AND</span> <span class="k">comments</span><span class="mf">.</span><span class="n">post_date</span> <span class="o">&gt;</span> <span class="p">(</span> <span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="nb">INTERVAL</span> <span class="s1">&#39;1 year&#39;</span><span class="p">)</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">persons</span><span class="mf">.</span><span class="n">id</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">forums</span><span class="mf">.</span><span class="n">category</span>
+<span class="k">HAVING</span> <span class="n">count</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="n">posts</span><span class="mf">.</span><span class="n">id</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">persons</span><span class="mf">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">first_name</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="literalinclude-directive">
+<h4>Literalinclude directive<a class="headerlink" href="#literalinclude-directive" title="Permalink to this headline">¶</a></h4>
+<p>Another option is to include part of a given source code file, like this:</p>
+<div class="highlight-none"><div class="highlight"><pre>.. literalinclude:: filename
+   :linenos:
+   :language:
+   :lines:
+   :start-after:
+   :end-before:
+   :emphasize-lines:
+</pre></div>
+</div>
+<p>Just below is a example:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> powershell
+  <span class="nc">:linenos:</span>
+</pre></div>
+</div>
+<p>Instead of using line numbers (which can change), it is possible to
+use the options <code class="docutils literal"><span class="pre">:start-after</span></code> and <code class="docutils literal"><span class="pre">:end-before:</span></code>
+that search the included file for lines containing the specified text.
+For example:</p>
+<div class="highlight-none"><div class="highlight"><pre>.. literalinclude:: rst_codeblocks.rst
+   :language: rst
+   :start-after: Instead of using
+   :end-before: For example
+</pre></div>
+</div>
+<p>produces this result:</p>
+<div class="highlight-rst"><div class="highlight"><pre>use the options <span class="s">``:start-after``</span> and <span class="s">``:end-before:``</span>
+that search the included file for lines containing the specified text.
+</pre></div>
+</div>
+</div>
+<div class="section" id="pygments-lexers">
+<h4>Pygments lexers<a class="headerlink" href="#pygments-lexers" title="Permalink to this headline">¶</a></h4>
+<p>Syntax highlighting is done by Pygments (if installed):
+any of the <cite>Pygments language lexers</cite> can be used.</p>
+<p>The following table lists some useful lexers (in no particular order).</p>
+<table border="1" class="docutils" id="pygments-lexers-ref">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Lexer</th>
+<th class="head">Shortname</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Structured Query Language</td>
+<td>sql</td>
+</tr>
+<tr class="row-odd"><td>PostgreSQL dialect of SQL</td>
+<td>postgresql</td>
+</tr>
+<tr class="row-even"><td>PostgreSQL procedural language</td>
+<td>plpgsql</td>
+</tr>
+<tr class="row-odd"><td>PostgreSQL console sessions</td>
+<td>psql</td>
+</tr>
+<tr class="row-even"><td>ReStructured Text</td>
+<td>rst</td>
+</tr>
+<tr class="row-odd"><td>TeX and LaTeX</td>
+<td>latex</td>
+</tr>
+<tr class="row-even"><td>DOS/Windows batch file</td>
+<td>bat</td>
+</tr>
+<tr class="row-odd"><td>Windows PowerShell</td>
+<td>powershell</td>
+</tr>
+<tr class="row-even"><td>Bash shell scripts</td>
+<td>bash</td>
+</tr>
+<tr class="row-odd"><td>Bash shell sessions</td>
+<td>console</td>
+</tr>
+<tr class="row-even"><td>Cascading Style Sheets</td>
+<td>css</td>
+</tr>
+<tr class="row-odd"><td>HTML 4 and XHTML 1</td>
+<td>html</td>
+</tr>
+<tr class="row-even"><td>XML</td>
+<td>xml</td>
+</tr>
+<tr class="row-odd"><td>XSLT</td>
+<td>xslt</td>
+</tr>
+<tr class="row-even"><td>XQuery</td>
+<td>xquery</td>
+</tr>
+<tr class="row-odd"><td>JavaScript</td>
+<td>javascript</td>
+</tr>
+<tr class="row-even"><td>JSON data structures</td>
+<td>json</td>
+</tr>
+<tr class="row-odd"><td>PHP source code</td>
+<td>php</td>
+</tr>
+<tr class="row-even"><td>PHP embedded in HTML</td>
+<td>html+php</td>
+</tr>
+<tr class="row-odd"><td>Python 2</td>
+<td>python</td>
+</tr>
+<tr class="row-even"><td>Python 2 tracebacks</td>
+<td>pytb</td>
+</tr>
+<tr class="row-odd"><td>Python console</td>
+<td>pycon</td>
+</tr>
+<tr class="row-even"><td>Java</td>
+<td>java</td>
+</tr>
+<tr class="row-odd"><td>Configuration file in the Java&#8217;s properties format</td>
+<td>jproperties</td>
+</tr>
+<tr class="row-even"><td>Configuration file in the Apache config file format</td>
+<td>apacheconf</td>
+</tr>
+<tr class="row-odd"><td>R source code (or S, or S-plus)</td>
+<td>r</td>
+</tr>
+<tr class="row-even"><td>R console</td>
+<td>rout</td>
+</tr>
+<tr class="row-odd"><td>Matlab</td>
+<td>matlab</td>
+</tr>
+<tr class="row-even"><td>Matlab sessions</td>
+<td>matlabsession</td>
+</tr>
+<tr class="row-odd"><td>NumPy</td>
+<td>numpy</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="page.html" class="btn btn-neutral float-right" title="Creating diagrams in Sphinx" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rst_general_markup.html" class="btn btn-neutral" title="Sphinx’s reStructuredText markup" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, PROJECT COMPANY.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

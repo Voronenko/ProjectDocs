@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Page element’s examples &mdash; PROJECT NAME 1.0 documentation</title>
+  <title>Creating diagrams in Sphinx &mdash; PROJECT NAME 1.0 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
     <link rel="top" title="PROJECT NAME 1.0 documentation" href="../index.html"/>
         <link rel="up" title="PROJECT" href="index.html"/>
         <link rel="next" title="You can use python jinja2 template formatter to generate pages" href="test_page_generated.html"/>
-        <link rel="prev" title="PROJECT" href="index.html"/> 
+        <link rel="prev" title="Codeblock’s examples" href="rst_codeblocks.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -91,20 +91,25 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">PROJECT</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Page element&#8217;s examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#blockdiag-block-diagram">Blockdiag - block diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#seqdiag-sequence-diagram">Seqdiag - sequence diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#actdiag-activity-diagrams">Actdiag - activity diagrams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#nwdiag-network-diagram">nwdiag - network diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plantuml">Plantuml</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plantuml-class-diagrams">Plantuml - class diagrams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plantuml-usecase-diagram">Plantuml - usecase diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plantuml-activity-diagram">Plantuml - activity diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plantuml-state-diagram">Plantuml - state diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plantuml-ui-example">Plantuml - UI example</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#using-the-sphinx-itself">Using the sphinx itself</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="rst_general_markup.html">Sphinx&#8217;s reStructuredText markup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst_codeblocks.html">Codeblock&#8217;s examples</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Creating diagrams in Sphinx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blockdiag-block-diagram">Blockdiag - block diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seqdiag-sequence-diagram">Seqdiag - sequence diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#actdiag-activity-diagrams">Actdiag - activity diagrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nwdiag-network-diagram">nwdiag - network diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plantuml">Plantuml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plantuml-class-diagrams">Plantuml - class diagrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plantuml-usecase-diagram">Plantuml - usecase diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plantuml-activity-diagram">Plantuml - activity diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plantuml-state-diagram">Plantuml - state diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plantuml-ui-example">Plantuml - UI example</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="test_page_generated.html">You can use python jinja2 template formatter to generate pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_page_generated.html">You can use python jinja2 template formatter to generate pages</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Recent Changes</a></li>
@@ -140,7 +145,7 @@
       
           <li><a href="index.html">PROJECT</a> &raquo;</li>
       
-    <li>Page element&#8217;s examples</li>
+    <li>Creating diagrams in Sphinx</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -154,8 +159,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="page-element-s-examples">
-<h1>Page element&#8217;s examples<a class="headerlink" href="#page-element-s-examples" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="creating-diagrams-in-sphinx">
+<h1>Creating diagrams in Sphinx<a class="headerlink" href="#creating-diagrams-in-sphinx" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="blockdiag-block-diagram">
 <h2>Blockdiag - block diagram<a class="headerlink" href="#blockdiag-block-diagram" title="Permalink to this headline">¶</a></h2>
 <div><img height="120" src="../_images/blockdiag-7ab598bcedad1369a1e148bf3a240d79a50820c8.png" width="640" /></div><table border="1" class="docutils">
@@ -180,6 +185,18 @@
 </tr>
 </tbody>
 </table>
+<p>This is the code for the example above:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">blockdiag</span><span class="p">::</span>
+   <span class="nc">:desctable:</span>
+
+   blockdiag {
+      A -&gt; B -&gt; C;
+      A [description = &quot;browsers in each client&quot;];
+      B [description = &quot;web server&quot;];
+      C [description = &quot;database server&quot;];
+   }
+</pre></div>
+</div>
 </div>
 <div class="section" id="seqdiag-sequence-diagram">
 <h2>Seqdiag - sequence diagram<a class="headerlink" href="#seqdiag-sequence-diagram" title="Permalink to this headline">¶</a></h2>
@@ -205,6 +222,18 @@
 </tr>
 </tbody>
 </table>
+<p>This is the code for the example above:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">seqdiag</span><span class="p">::</span>
+   <span class="nc">:desctable:</span>
+
+   seqdiag {
+      A -&gt; B -&gt; C;
+      A [description = &quot;browsers in each client&quot;];
+      B [description = &quot;web server&quot;];
+      C [description = &quot;database server&quot;];
+   }
+</pre></div>
+</div>
 </div>
 <div class="section" id="actdiag-activity-diagrams">
 <h2>Actdiag - activity diagrams<a class="headerlink" href="#actdiag-activity-diagrams" title="Permalink to this headline">¶</a></h2>
@@ -230,6 +259,17 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">actdiag</span><span class="p">::</span>
+   <span class="nc">:desctable:</span>
+
+   actdiag {
+      A -&gt; B -&gt; C;
+      A [description = &quot;browsers in each client&quot;];
+      B [description = &quot;web server&quot;];
+      C [description = &quot;database server&quot;];
+   }
+</pre></div>
+</div>
 </div>
 <div class="section" id="nwdiag-network-diagram">
 <h2>nwdiag - network diagram<a class="headerlink" href="#nwdiag-network-diagram" title="Permalink to this headline">¶</a></h2>
@@ -255,6 +295,21 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">nwdiag</span><span class="p">::</span>
+   <span class="nc">:desctable:</span>
+
+   nwdiag {
+      network {
+        A [address = 192.168.0.1, description = &quot;web server01&quot;];
+        B [address = 192.168.0.2, description = &quot;web server02&quot;];
+      }
+      network {
+        A [address = 172.0.0.1];
+        C [address = 172.0.0.2, description = &quot;database server&quot;];
+      }
+   }
+</pre></div>
+</div>
 </div>
 <div class="section" id="plantuml">
 <h2>Plantuml<a class="headerlink" href="#plantuml" title="Permalink to this headline">¶</a></h2>
@@ -267,12 +322,31 @@ note left of user
 end note
 &#64;enduml" />
 </p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+   user -&gt; (use PlantUML)
+
+   note left of user
+      Hello!
+   end note
+   @enduml
+</pre></div>
+</div>
 <p class="plantuml">
 <img src="../_images/plantuml-81d418b37a50fa9b7a1b7412d62a590ebaac9cb8.png" alt="&#64;startuml
 Alice -&gt; Bob: Hi!
 Alice &lt;- Bob: How are you?
 &#64;enduml" />
 </p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+   Alice -&gt; Bob: Hi!
+   Alice &lt;- Bob: How are you?
+   @enduml
+</pre></div>
+</div>
 </div>
 <div class="section" id="plantuml-class-diagrams">
 <h2>Plantuml - class diagrams<a class="headerlink" href="#plantuml-class-diagrams" title="Permalink to this headline">¶</a></h2>
@@ -402,6 +476,79 @@ class Enrollment {
 
 &#64;enduml" />
 </p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+      @startuml
+
+      &#39;style options
+      skinparam monochrome true
+      skinparam circledCharacterRadius 9
+      skinparam circledCharacterFontSize 8
+      skinparam classAttributeIconSize 0
+      hide empty members
+
+      abstract class AbstractClass {
+        <span class="m">-</span> privateField
+        <span class="m">+</span> publicField
+        # protectedField
+        ~ packagePrivateField
+        <span class="m">-</span> privateMethod()
+        <span class="m">+</span> publicMethod()
+        # protectedMethod()
+        ~ packagePrivateMethod()
+         }
+
+      class Dummy {
+        {static} staticID
+        {abstract} void methods()
+         }
+
+      class Flight {
+         flightNumber : Integer
+         departureTime : Date
+         }
+
+      package &quot;Classic Collections&quot; {
+
+         abstract class AbstractList
+         abstract AbstractCollection
+         interface List
+         interface Collection
+
+         List &lt;|-- AbstractList
+         Collection &lt;|-- AbstractCollection
+
+         Collection &lt;|- List
+         AbstractCollection &lt;|- AbstractList
+         AbstractList &lt;|-- ArrayList
+
+         class ArrayList {
+           Object[] elementData
+           size()
+            }
+      }
+
+      enum TimeUnit {
+        DAYS
+        HOURS
+        MINUTES
+      }
+
+
+      class Student {
+        Name
+      }
+      Student &quot;0..<span class="ge">*&quot; -- &quot;1..*</span>&quot; Course
+      (Student, Course) .. Enrollment
+
+      class Enrollment {
+        drop()
+        cancel()
+      }
+
+      @enduml
+</pre></div>
+</div>
 </div>
 <div class="section" id="plantuml-usecase-diagram">
 <h2>Plantuml - usecase diagram<a class="headerlink" href="#plantuml-usecase-diagram" title="Permalink to this headline">¶</a></h2>
@@ -447,6 +594,50 @@ ThirdActor ----&gt; (LowerCase)
 
 &#64;enduml" />
 </p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+   actor &quot;Main Database&quot; as DB &lt;&lt; Application &gt;&gt;
+
+   note left of DB
+      This actor
+      has a &quot;name with spaces&quot;,
+      an alias
+      and a stereotype
+   end note
+
+   actor User &lt;&lt; Human &gt;&gt;
+   actor SpecialisedUser
+   actor Administrator
+
+   User &lt;|--- SpecialisedUser
+   User &lt;|--- Administrator
+
+   usecase (Use the application) as (Use) &lt;&lt; Main &gt;&gt;
+   usecase (Configure the application) as (Config)
+   Use ..&gt; Config : &lt;&lt;includes&gt;&gt;
+
+   User --&gt; Use
+   DB --&gt; Use
+
+   Administrator --&gt; Config
+
+   note &quot;This note applies to\nboth actors.&quot; as MyNote
+   MyNote .. Administrator
+   MyNote .. SpecialisedUser
+
+   &#39;  this is a text comment and won&#39;t be displayed
+   AnotherActor ---&gt; (AnotherUseCase)
+
+   &#39;  to increase the length of the edges, just add extras dashes, like this:
+   ThirdActor ----&gt; (LowerCase)
+
+   &#39;  The direction of the edge can also be reversed, like this:
+   (UpperCase) &lt;---- FourthActor
+
+   @enduml
+</pre></div>
+</div>
 </div>
 <div class="section" id="plantuml-activity-diagram">
 <h2>Plantuml - activity diagram<a class="headerlink" href="#plantuml-activity-diagram" title="Permalink to this headline">¶</a></h2>
@@ -514,6 +705,72 @@ stop
 
 &#64;enduml" />
 </p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+
+   start
+
+   :first activity;
+
+   :second activity
+    with a multiline
+    and rather long description;
+
+   :another activity;
+
+   note right
+     After this activity,
+     are two &#39;if-then-else&#39; examples.
+   end note
+
+   if (do optional activity?) then (yes)
+      :optional activity;
+   else (no)
+
+      if (want to exit?) then (right now!)
+         stop
+      else (not really)
+
+      endif
+
+   endif
+
+   :third activity;
+
+   note left
+     After this activity,
+     parallel activities will occur.
+   end note
+
+   fork
+      :Concurrent activity A;
+   fork again
+      :Concurrent activity B1;
+      :Concurrent activity B2;
+   fork again
+      :Concurrent activity C;
+      fork
+      :Nested C1;
+      fork again
+      :Nested C2;
+      end fork
+   end fork
+
+   repeat
+      :repetitive activity;
+   repeat while (again?)
+
+   while (continue?) is (yes, of course)
+     :first activity inside the while loop;
+     :second activity inside the while loop;
+   endwhile (no)
+
+   stop
+
+   @enduml
+</pre></div>
+</div>
 </div>
 <div class="section" id="plantuml-state-diagram">
 <h2>Plantuml - state diagram<a class="headerlink" href="#plantuml-state-diagram" title="Permalink to this headline">¶</a></h2>
@@ -563,6 +820,54 @@ end note
 
 &#64;enduml" />
 </p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+
+   [*] --&gt; MyState
+   MyState --&gt; CompositeState
+   MyState --&gt; AnotherCompositeState
+   MyState --&gt; WrongState
+
+   CompositeState --&gt; CompositeState : \ this is a loop
+   AnotherCompositeState --&gt; [*]
+   CompositeState --&gt; [*]
+
+   MyState : this is a string
+   MyState : this is another string
+
+   state CompositeState {
+
+   [*] --&gt; StateA : begin something
+   StateA --&gt; StateB : from A to B
+   StateB --&gt; StateA : from B back to A
+   StateB --&gt; [*] : end it
+
+   CompositeState : yet another string
+   }
+
+   state AnotherCompositeState {
+
+   [*] --&gt; ConcurrentStateA
+   ConcurrentStateA --&gt; ConcurrentStateA
+
+   --
+
+   [*] --&gt; ConcurrentStateB
+   ConcurrentStateB --&gt; ConcurrentStateC
+   ConcurrentStateC --&gt; ConcurrentStateB
+   }
+
+   note left of WrongState
+      This state
+      is a dead-end
+      and shouldn&#39;t
+      exist.
+   end note
+
+   @enduml
+</pre></div>
+</div>
 </div>
 <div class="section" id="plantuml-ui-example">
 <h2>Plantuml - UI example<a class="headerlink" href="#plantuml-ui-example" title="Permalink to this headline">¶</a></h2>
@@ -581,6 +886,23 @@ salt
 }
 &#64;enduml" />
 </p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+   salt
+   {
+     Just plain text
+     [This is my button]
+     ()  Unchecked radio
+     <span class="m">(X)</span> Checked radio
+     []  Unchecked box
+     [X] Checked box
+     &quot;Enter text here   &quot;
+     ^This is a droplist^
+   }
+   @enduml
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -594,7 +916,7 @@ salt
         <a href="test_page_generated.html" class="btn btn-neutral float-right" title="You can use python jinja2 template formatter to generate pages" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="PROJECT" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rst_codeblocks.html" class="btn btn-neutral" title="Codeblock’s examples" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
