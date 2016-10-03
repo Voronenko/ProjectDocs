@@ -38,6 +38,15 @@ pandoc -s flow.docx -t rst -o product_flow.rst
 
 ```
 
+Converting markdown artifact:
+
+```
+
+pandoc --from=markdown --to=rst --output=README.rst README.md
+
+```
+
+
 Online work pad for diagramming construction
 http://interactive.blockdiag.com/
 
