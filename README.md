@@ -45,6 +45,10 @@ Online work pad for UML diagrams construction
 
 http://plantuml.com/plantuml/uml/
 
+PlantUML learning pad with examples: 
+
+http://www.planttext.com/planttext
+
 
 Generate pgsql schema diagram with schemacrawler  http://sualeh.github.io/SchemaCrawler/ , example:
 
