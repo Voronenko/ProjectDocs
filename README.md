@@ -46,6 +46,7 @@ pandoc --from=markdown --to=rst --output=README.rst README.md
 
 ```
 
+PandaDoc online:  https://pandoc.org/try/
 
 Online work pad for diagramming construction
 http://interactive.blockdiag.com/
