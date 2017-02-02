@@ -8,6 +8,9 @@
 # serve to show the default.
 
 from datetime import datetime
+import sphinx.environment
+from docutils.utils import get_source_line
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -85,6 +88,18 @@ exclude_patterns = ['slides']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
+
+
+# WARNING - PATCH - REMOVE ONCE YOU HAVE SUPPORT FOR suppress_warnings
+
+def _warn_node(self, msg, node, **kwargs):
+    if not msg.startswith('nonlocal image URI found:'):
+        self._warnfunc(msg, '%s:%s' % get_source_line(node), **kwargs)
+
+sphinx.environment.BuildEnvironment.warn_node = _warn_node
+
+# Suppress specific warnings
+suppress_warnings = ['image.nonlocal_uri']
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
