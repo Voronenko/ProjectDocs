@@ -4,6 +4,8 @@ More examples
 Activity diagrams
 ~~~~~~~~~~~~~~~~~
 
+.. begin-activity-diagram-example
+
 .. uml::
 
     @startuml
@@ -27,19 +29,30 @@ Activity diagrams
 
     @enduml
 
+.. end-activity-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+  :language: rst
+  :start-after: begin-activity-diagram-example
+  :end-before: end-activity-diagram-example
+
+.. begin-conditional-activity-diagram-example
+
 .. uml::
 
     @startuml
 
-    title Conditional - Activity Diagram 
+    title Conditional - Activity Diagram
 
 
     start
 
-    :Eat Hot Wings; 
+    :Eat Hot Wings;
     note right: This is a note to the right
 
-    :Drink Homebrew; 
+    :Drink Homebrew;
     note left: This is a note to the left
 
     if (Turn On The Game?) then (yes)
@@ -54,11 +67,23 @@ Activity diagrams
 
     @enduml
 
+.. end-conditional-activity-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+      :language: rst
+      :start-after: begin-conditional-activity-diagram-example
+      :end-before: end-conditional-activity-diagram-example
+
+
+.. begin-notes-activity-diagram-example
+
 .. uml::
 
     @startuml
 
-    title Notes - Activity Diagram 
+    title Notes - Activity Diagram
 
 
     start
@@ -83,11 +108,23 @@ Activity diagrams
 
     @enduml
 
+.. end-notes-activity-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+        :language: rst
+        :start-after: begin-notes-activity-diagram-example
+        :end-before: end-notes-activity-diagram-example
+
+
+.. begin-repeat-activity-diagram-example
+
 .. uml::
 
     @startuml
 
-    title Repeat - Activity Diagram 
+    title Repeat - Activity Diagram
 
 
     start
@@ -101,11 +138,23 @@ Activity diagrams
 
     @enduml
 
+.. end-repeat-activity-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-repeat-activity-diagram-example
+          :end-before: end-repeat-activity-diagram-example
+
+
+.. begin-while-activity-diagram-example
+
 .. uml::
 
     @startuml
 
-    title While Loop - Activity Diagram 
+    title While Loop - Activity Diagram
 
 
     start
@@ -121,11 +170,22 @@ Activity diagrams
 
     @enduml
 
+.. end-while-activity-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-while-activity-diagram-example
+          :end-before: end-while-activity-diagram-example
+
+.. begin-parallel-activity-diagram-example
+
 .. uml::
 
     @startuml
 
-    title Parallel - Activity Diagram 
+    title Parallel - Activity Diagram
 
 
     start
@@ -151,11 +211,23 @@ Activity diagrams
 
     @enduml
 
+.. end-parallel-activity-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-parallel-activity-diagram-example
+          :end-before: end-parallel-activity-diagram-example
+
+
+.. begin-color-activity-diagram-example
+
 .. uml::
 
     @startuml
 
-    title Color - Activity Diagram 
+    title Color - Activity Diagram
 
 
     skinparam backgroundColor #AAAAAA
@@ -176,9 +248,22 @@ Activity diagrams
 
     @enduml
 
+.. end-color-activity-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-color-activity-diagram-example
+          :end-before: end-color-activity-diagram-example
+
+
 
 Class diagrams
-~~~~~~~~~~~~~~    
+~~~~~~~~~~~~~~
+
+
+.. begin-classes-class-diagram-example
 
 .. uml::
 
@@ -198,6 +283,17 @@ Class diagrams
 
     @enduml
 
+.. end-classes-class-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-classes-class-diagram-example
+          :end-before: end-classes-class-diagram-example
+
+
+.. begin-relationships-class-diagram-example
 
 .. uml::
 
@@ -224,6 +320,20 @@ Class diagrams
     Dwelling "1" *-up- "many" Door: Composition
 
     @enduml
+
+
+.. end-relationships-class-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-relationships-class-diagram-example
+          :end-before: end-relationships-class-diagram-example
+
+
+.. begin-types-class-diagram-example
+
 
 .. uml::
 
@@ -289,6 +399,18 @@ Class diagrams
     @enduml
 
 
+.. end-types-class-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-types-class-diagram-example
+          :end-before: end-types-class-diagram-example
+
+
+.. begin-methods-class-diagram-example
+
 .. uml::
 
     @startuml
@@ -324,6 +446,18 @@ Class diagrams
 
     @enduml
 
+.. end-methods-class-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-methods-class-diagram-example
+          :end-before: end-methods-class-diagram-example
+
+
+.. begin-interfaces-class-diagram-example
+
 .. uml::
 
     @startuml
@@ -337,6 +471,18 @@ Class diagrams
     Car -() ICar3
 
     @enduml
+
+.. end-interfaces-class-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-interfaces-class-diagram-example
+          :end-before: end-interfaces-class-diagram-example
+
+
+.. begin-packages-class-diagram-example
 
 .. uml::
 
@@ -371,8 +517,20 @@ Class diagrams
 
     @enduml
 
+.. end-packages-class-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-packages-class-diagram-example
+          :end-before: end-packages-class-diagram-example
+
+
 Component diagrams
-~~~~~~~~~~~~~~~~~~    
+~~~~~~~~~~~~~~~~~~
+
+.. begin-components-component-diagram-example
 
 .. uml::
 
@@ -381,10 +539,23 @@ Component diagrams
     title Components - Component Diagram
 
     [Business Logic]
-    [Data Access] as DA  
+    [Data Access] as DA
     component [Graphic User\nInterface] as GUI
 
     @enduml
+
+
+.. end-components-component-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-components-component-diagram-example
+          :end-before: end-components-component-diagram-example
+
+
+.. begin-interfaces-component-diagram-example
 
 .. uml::
 
@@ -393,7 +564,7 @@ Component diagrams
     title Interfaces - Component Diagram
 
     [Business Logic]
-    [Data Access] as DA  
+    [Data Access] as DA
     component [Graphic User\nInterface] as GUI
 
     interface IMath as Math
@@ -403,6 +574,18 @@ Component diagrams
     DA .. Items
 
     @enduml
+
+.. end-interfaces-component-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-interfaces-component-diagram-example
+          :end-before: end-interfaces-component-diagram-example
+
+
+.. begin-packages-component-diagram-example
 
 .. uml::
 
@@ -418,22 +601,22 @@ Component diagrams
 
     cloud Internet {
     }
-    
+
     node "Middle Tier" {
         [Business Logic]
-        [Data Access] as DA  
+        [Data Access] as DA
         interface IMath as Math
         note left of Math : This is a web\nService Interface
         note right of Math : Notice the\nlabel below
         interface "IItems" as Items
-        
+
         note left of [Business Logic]
             A note can also
             be on several lines
             like this one
         end note
-        
-    } 
+
+    }
 
     database "PostgreSQL\n" {
         [Stored Procs]
@@ -448,18 +631,43 @@ Component diagrams
 
     @enduml
 
+.. end-packages-component-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-packages-component-diagram-example
+          :end-before: end-packages-component-diagram-example
+
+
 Graphviz diagrams
-~~~~~~~~~~~~~~~~~    
+~~~~~~~~~~~~~~~~~
 
 Hello world
+
+
+.. begin-hello-gv-diagram-example
 
 .. uml::
 
     @startuml
     digraph G {
         Hello -> World
-    } 
+    }
     @enduml
+
+.. end-hello-gv-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-hello-gv-diagram-example
+          :end-before: end-hello-gv-diagram-example
+
+
+.. begin-world-gv-diagram-example
 
 World dynamics
 
@@ -535,7 +743,21 @@ World dynamics
     }
     @enduml
 
+
+.. end-world-gv-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-world-gv-diagram-example
+          :end-before: end-world-gv-diagram-example
+
+
+
 Data structures
+
+.. begin-data-gv-diagram-example
 
 .. uml::
 
@@ -657,7 +879,19 @@ Data structures
     @enduml
 
 
+.. end-data-gv-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-data-gv-diagram-example
+          :end-before: end-data-gv-diagram-example
+
+
 Graph cluster node gradient
+
+.. begin-gradient-gv-diagram-example
 
 .. uml::
 
@@ -669,12 +903,24 @@ Graph cluster node gradient
             anode;
         }
 
-    } 
+    }
     @enduml
+
+.. end-gradient-gv-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-gradient-gv-diagram-example
+          :end-before: end-gradient-gv-diagram-example
+
 
 
 Object diagrams
-~~~~~~~~~~~~~~~    
+~~~~~~~~~~~~~~~
+
+.. begin-objects-object-diagram-example
 
 .. uml::
 
@@ -707,10 +953,22 @@ Object diagrams
 
     @enduml
 
+.. end-objects-object-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-objects-object-diagram-example
+          :end-before: end-objects-object-diagram-example
+
+
 Salt gui diagrams
 ~~~~~~~~~~~~~~~~~
 
 Basic elements
+
+.. begin-basic-salt-diagram-example
 
 .. uml::
 
@@ -730,7 +988,20 @@ Basic elements
 
     @enduml
 
+.. end-basic-salt-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-basic-salt-diagram-example
+          :end-before: end-basic-salt-diagram-example
+
+
 Grid
+
+
+.. begin-grid-salt-diagram-example
 
 .. uml::
 
@@ -744,7 +1015,19 @@ Grid
 
     @endsalt
 
+.. end-grid-salt-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-grid-salt-diagram-example
+          :end-before: end-grid-salt-diagram-example
+
+
 Separators
+
+.. begin-separators-salt-diagram-example
 
 .. uml::
 
@@ -763,7 +1046,20 @@ Separators
 
     @endsalt
 
+.. end-separators-salt-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-separators-salt-diagram-example
+          :end-before: end-separators-salt-diagram-example
+
+
 Treeview
+
+
+.. begin-tree-salt-diagram-example
 
 .. uml::
 
@@ -790,7 +1086,19 @@ Treeview
 
     @endsalt
 
-Brackets    
+.. end-tree-salt-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-tree-salt-diagram-example
+          :end-before: end-tree-salt-diagram-example
+
+
+Brackets
+
+.. begin-brackets-salt-diagram-example
 
 .. uml::
 
@@ -799,14 +1107,26 @@ Brackets
     {
     Name         | "                 "
     Direction:   | { (X) Left | () Right | () Up | () Down }
-    Attending?:  | {  [] Yes | [] No  
+    Attending?:  | {  [] Yes | [] No
                     [] Maybe }
     [Browse...] }
     }
 
     @endsalt
 
-Tabs    
+.. end-brackets-salt-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-brackets-salt-diagram-example
+          :end-before: end-brackets-salt-diagram-example
+
+
+Tabs
+
+.. begin-tabs-salt-diagram-example
 
 .. uml::
 
@@ -819,7 +1139,7 @@ Tabs
         {
         Name         | "                 "
         Direction:   | { (X) Left | () Right | () Up | () Down }
-        Attending?:  | {  [] Yes | [] No  
+        Attending?:  | {  [] Yes | [] No
                         [] Maybe }
         [Browse...] }
         }
@@ -828,7 +1148,19 @@ Tabs
 
     @endsalt
 
+.. end-tabs-salt-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-tabs-salt-diagram-example
+          :end-before: end-tabs-salt-diagram-example
+
+
 Menus
+
+.. begin-menus-salt-diagram-example
 
 .. uml::
 
@@ -836,7 +1168,7 @@ Menus
 
     {+
 
-    {* File | Edit | Source | Refactor 
+    {* File | Edit | Source | Refactor
     Refactor | New | Open File | - | Close | <b>Close All</b> }
 
         {/ <b>General | Fullscreen | Behavior | Saving }
@@ -844,7 +1176,7 @@ Menus
         {
         Name         | "                 "
         Direction:   | { (X) Left | () Right | () Up | () Down }
-        Attending?:  | {  [] Yes | [] No  
+        Attending?:  | {  [] Yes | [] No
                         [] Maybe }
         [Browse...] }
         }
@@ -853,8 +1185,20 @@ Menus
 
     @endsalt
 
+.. end-menus-salt-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-menus-salt-diagram-example
+          :end-before: end-menus-salt-diagram-example
+
+
 Sequence diagrams
 ~~~~~~~~~~~~~~~~~
+
+.. begin-parts-sequence-diagram-example
 
 .. uml::
 
@@ -869,6 +1213,18 @@ Sequence diagrams
     database Widgets
 
     @enduml
+
+.. end-parts-sequence-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-parts-sequence-diagram-example
+          :end-before: end-parts-sequence-diagram-example
+
+
+.. begin-messages-sequence-diagram-example
 
 .. uml::
 
@@ -888,6 +1244,18 @@ Sequence diagrams
     Widget -> Widgets : To database
 
     @enduml
+
+.. end-messages-sequence-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-messages-sequence-diagram-example
+          :end-before: end-messages-sequence-diagram-example
+
+
+.. begin-comments-sequence-diagram-example
 
 .. uml::
 
@@ -915,6 +1283,18 @@ Sequence diagrams
 
     @enduml
 
+.. end-comments-sequence-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-comments-sequence-diagram-example
+          :end-before: end-comments-sequence-diagram-example
+
+
+.. begin-message-sequence-diagram-example
+
 .. uml::
 
     @startuml
@@ -935,9 +1315,20 @@ Sequence diagrams
 
     @enduml
 
+.. end-message-sequence-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-message-sequence-diagram-example
+          :end-before: end-message-sequence-diagram-example
+
 
 State diagrams
 ~~~~~~~~~~~~~~
+
+.. begin-states-state-diagram-example
 
 .. uml::
 
@@ -958,13 +1349,24 @@ State diagrams
 
     @enduml
 
+.. end-states-state-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-states-state-diagram-example
+          :end-before: end-states-state-diagram-example
+
+.. begin-composite-state-diagram-example
+
 .. uml::
 
     @startuml
 
     title Simple Composite State Model
     [*] --> NeilDiamond
-    state NeilDiamond 
+    state NeilDiamond
 
     state "Neil Diamond" as NeilDiamond {
     state Dancing
@@ -977,12 +1379,23 @@ State diagrams
 
     @enduml
 
+.. end-composite-state-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-composite-state-diagram-example
+          :end-before: end-composite-state-diagram-example
+
+.. begin-orto-state-diagram-example
+
 .. uml::
 
     @startuml
     title Simple Orthogonal Composite State Model
     [*] --> NeilDiamond
-    state NeilDiamond 
+    state NeilDiamond
 
     state "Neil Diamond Onstage" as NeilDiamond {
     state Dancing
@@ -1006,6 +1419,18 @@ State diagrams
 
     @enduml
 
+.. end-orto-state-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-orto-state-diagram-example
+          :end-before: end-orto-state-diagram-example
+
+
+.. begin-concurrent-state-diagram-example
+
 .. uml::
 
     @startuml
@@ -1026,11 +1451,22 @@ State diagrams
     state "Being Prissy" as prissy
     state "Hating Chewbacca" as chewbacca
     [*] -> prissy
-    prissy --> chewbacca 
+    prissy --> chewbacca
     chewbacca --> prissy
-    } 
+    }
 
     @enduml
+
+.. end-concurrent-state-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-concurrent-state-diagram-example
+          :end-before: end-concurrent-state-diagram-example
+
+.. begin-arrows-state-diagram-example
 
 .. uml::
 
@@ -1044,7 +1480,7 @@ State diagrams
 
     note left of Hungry : Single line note
     note right of EatingBurrito
-        Notes can also 
+        Notes can also
         take up multiple
         lines like this
     end note
@@ -1056,14 +1492,26 @@ State diagrams
 
     @enduml
 
+.. end-arrows-state-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-arrows-state-diagram-example
+          :end-before: end-arrows-state-diagram-example
+
+
 Use case diagrams
 ~~~~~~~~~~~~~~~~~
+
+.. begin-use-uc-diagram-example
 
 .. uml::
 
     @startuml
 
-    title Use Case Diagram 
+    title Use Case Diagram
 
 
     (Login)
@@ -1073,19 +1521,42 @@ Use case diagrams
 
     @enduml
 
+.. end-use-uc-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-use-uc-diagram-example
+          :end-before: end-use-uc-diagram-example
+
+.. begin-actors-uc-diagram-example
+
 .. uml::
 
     @startuml
 
-    title Actors - Use Case Diagram 
+    title Actors - Use Case Diagram
 
 
     :Administrator:
-    :Standard User: as SU  
+    :Standard User: as SU
     actor Accountant
     actor :Client: as C
 
     @enduml
+
+.. end-actors-uc-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-actors-uc-diagram-example
+          :end-before: end-actors-uc-diagram-example
+
+.. begin-actors-uc-diagram-example-2
+
 
 .. uml::
 
@@ -1100,6 +1571,17 @@ Use case diagrams
     Supervisor --> (Create / Delete User): I am god
 
     @enduml
+
+.. end-actors-uc-diagram-example-2
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-actors-uc-diagram-example-2
+          :end-before: end-actors-uc-diagram-example-2
+
+.. begin-stereotypes-uc-diagram-example
 
 .. uml::
 
@@ -1119,6 +1601,18 @@ Use case diagrams
 
     @enduml
 
+.. end-stereotypes-uc-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-stereotypes-uc-diagram-example
+          :end-before: end-stereotypes-uc-diagram-example
+
+
+.. begin-directions-uc-diagram-example
+
 .. uml::
 
     @startuml
@@ -1135,6 +1629,18 @@ Use case diagrams
 
     @enduml
 
+.. end-directions-uc-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-directions-uc-diagram-example
+          :end-before: end-directions-uc-diagram-example
+
+
+.. begin-package-uc-diagram-example
+
 .. uml::
 
     @startuml
@@ -1147,7 +1653,7 @@ Use case diagrams
         (Create / Delete User) as CDU
     }
 
-    :Employee: 
+    :Employee:
     :Client:
     :Supervisor:
 
@@ -1158,17 +1664,40 @@ Use case diagrams
 
     @enduml
 
+.. end-package-uc-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-package-uc-diagram-example
+          :end-before: end-package-uc-diagram-example
+
+
 
 XEarth
 ~~~~~~
 
 Basic
 
+.. begin-xearth-xearth-diagram-example
+
 .. uml::
 
     @startuml
     xearth
     @enduml
+
+.. end-xearth-xearth-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-xearth-xearth-diagram-example
+          :end-before: end-xearth-xearth-diagram-example
+
+.. begin-denver-xearth-diagram-example
 
 .. uml::
 
@@ -1183,6 +1712,18 @@ Basic
     39.75 -105.00 "Denver"
     @enduml
 
+.. end-denver-xearth-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-denver-xearth-diagram-example
+          :end-before: end-denver-xearth-diagram-example
+
+
+.. begin-stars-xearth-diagram-example
+
 .. uml::
 
     @startuml
@@ -1191,6 +1732,18 @@ Basic
     starFrequency = 0.025
     bigStars = 20
     @enduml
+
+.. end-stars-xearth-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-stars-xearth-diagram-example
+          :end-before: end-stars-xearth-diagram-example
+
+
+.. begin-stars-xearth-diagram-example-2
 
 .. uml::
 
@@ -1201,6 +1754,18 @@ Basic
     sunPosRelLong = 40
     @enduml
 
+.. end-stars-xearth-diagram-example-2
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-stars-xearth-diagram-example-2
+          :end-before: end-stars-xearth-diagram-example-2
+
+
+.. begin-stars-xearth-diagram-example-3
+
 .. uml::
 
     @startuml
@@ -1209,6 +1774,18 @@ Basic
     gridDivision = 9
     gridPixelDivision = 8
     @enduml
+
+.. end-stars-xearth-diagram-example-3
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-stars-xearth-diagram-example-3
+          :end-before: end-stars-xearth-diagram-example-3
+
+
+.. begin-stars-xearth-diagram-example-4
 
 .. uml::
 
@@ -1221,6 +1798,18 @@ Basic
     gridP = false
     @enduml
 
+.. end-stars-xearth-diagram-example-4
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-stars-xearth-diagram-example-4
+          :end-before: end-stars-xearth-diagram-example-4
+
+
+.. begin-moon-xearth-diagram-example
+
 .. uml::
 
     @startuml
@@ -1230,6 +1819,18 @@ Basic
     nightSideBrightness = 30
     terminatorDiscontinuity = 50
     @enduml
+
+.. end-moon-xearth-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :start-after: begin-moon-xearth-diagram-example
+          :end-before: end-moon-xearth-diagram-example
+
+
+.. begin-cities-xearth-diagram-example
 
 .. uml::
 
@@ -1313,3 +1914,11 @@ Basic
     -90.00    0.00 "South Pole"          # South Pole
     @enduml
 
+.. end-cities-xearth-diagram-example
+
+This is the code for the example above:
+
+.. literalinclude:: page_more.rst
+          :language: rst
+          :end-before: end-cities-xearth-diagram-example
+          :start-after: begin-cities-xearth-diagram-example
