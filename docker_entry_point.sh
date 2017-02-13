@@ -10,7 +10,5 @@ adduser -u $DOCKER_UID -D -g '' $DOCKER_USER
 adduser $DOCKER_USER sudo || true
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 # This will be uncommented once issue with switching rights fixed
-#su -m $DOCKER_USER -c /opt/sphinxproject/clean_build_docker.sh
-/opt/sphinxproject/clean_build_docker.sh
-chown -R $DOCKER_USER:$DOCKER_USER /opt/sphinxproject/docs/html
+su -m $DOCKER_USER -c /opt/sphinxproject/clean_build_docker.sh
 

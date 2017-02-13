@@ -8,14 +8,14 @@ RUNNING=$(docker inspect --format="{{ .State.Running }}" projectdocs 2> /dev/nul
 
 if [ $? -eq 1 ]; then
   echo "PROJECTDOCS CONTAINER DOES NOT EXIST - CREATE IT"
-  docker create -it -v $PWD:/opt/sphinxproject --name projectdocs softasap/sphinx:latest bash
+  docker create -it -v $PWD:/opt/sphinxproject --name projectdocs softasap/sphinx-projectdocs:latest bash
   docker start projectdocs
   echo projectdocs container created
 fi
 
-if [ "$RUNNING" != "true" ]; then
+if [ "$RUNNING" == "false" ]; then
   echo "RUN PROJECTDOCS CONTAINER"
-  docker run projectdocs
+  docker start projectdocs
   echo projectdocs container running
 fi
 
