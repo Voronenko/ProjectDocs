@@ -5,7 +5,7 @@ Known issues:
 
 Most likely you are hitting:
 
-### ubuntu 14.04, 
+### ubuntu 14.04,
 
 error  ValueError: --enable-jpeg requested but jpeg not found, aborting
 
@@ -25,7 +25,7 @@ Take a look on  https://github.com/Voronenko/projectdocs/blob/master/Dockerfile
 it has listed all binary packages required. Check you have all of them or alternatives.
 
 
-useful tools 
+useful tools
 ============
 
 Formats convertor:  https://github.com/jgm/pandoc
@@ -55,7 +55,7 @@ Online work pad for UML diagrams construction
 
 http://plantuml.com/plantuml/uml/
 
-PlantUML learning pad with examples: 
+PlantUML learning pad with examples:
 
 http://www.planttext.com/planttext
 
@@ -74,6 +74,11 @@ Generate pgsql schema diagram portal with schemaspy http://schemaspy.sourceforge
 schemaspy -t pgsql -db demo_test -host localhost -port 5432 -s public -u postgres -p postgres  -o output
 ```
 
+Incorporate static code analysis into your project:
+
+Doxygen:
+
+https://github.com/michaeljones/breathe/tree/master
 
 
 Building docs project
@@ -116,12 +121,29 @@ You need to have docker installed. File ./docker_build.sh does similar task as c
 
 ```
 
-  #!/bin/bash
+#!/bin/bash
 
-  docker create -it -v $PWD:/opt/sphinxproject --name projectdocs softasap/sphinx:latest bash
+DOCKER_UID=$(id -u)
 
-  # Now start it.
+DOCKER_USER=$(whoami)
+
+RUNNING=$(docker inspect --format="{{ .State.Running }}" projectdocs 2> /dev/null)
+
+if [ $? -eq 1 ]; then
+  echo "PROJECTDOCS CONTAINER DOES NOT EXIST - CREATE IT"
+  docker create -it -v $PWD:/opt/sphinxproject --name projectdocs softasap/sphinx-projectdocs:latest bash
   docker start projectdocs
+  echo projectdocs container created
+fi
 
-  docker exec -it projectdocs "cd /opt/sphinxproject && make --makefile Makefiledck"
+if [ "$RUNNING" == "false" ]; then
+  echo "RUN PROJECTDOCS CONTAINER"
+  docker start projectdocs
+  echo projectdocs container running
+fi
+
+echo "building docs"
+echo docker exec -it projectdocs bash -c "export DOCKER_UID=${DOCKER_UID} && export DOCKER_USER=${DOCKER_USER} && /opt/sphinxproject/docker_entry_point.sh"
+docker exec -it projectdocs bash -c "export DOCKER_UID=${DOCKER_UID} && export DOCKER_USER=${DOCKER_USER} && /opt/sphinxproject/docker_entry_point.sh"
+
 ```
