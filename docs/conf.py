@@ -34,6 +34,7 @@ extensions = [
 # comment if you don't have in the system
     'sphinxcontrib.plantuml',
     'cloud_sptheme.ext.table_styling',
+    'rst2pdf.pdfbuilder',
     'mobi'
 ]
 
@@ -242,3 +243,5 @@ latex_documents = [
 # mobile support
 
 mobi_theme = 'mobi'
+
+pdf_documents = [(master_doc, project, version, copyright),]

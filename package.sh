@@ -27,9 +27,9 @@ echo "git_branch" >> $VERSIONFILE
 echo "built=$DATE" >> $VERSIONFILE
 echo "ARTIFACT_VERSION=$VERSION" >> $VERSIONFILE
 
-cp $VERSIONFILE ./docs/html || true
+cp $VERSIONFILE ./out/html || true
 
-cd ./docs/html
+cd ./out/html
 
 echo tar cfz $PROJECT-$VERSION$SUFFIX.tgz . $SKIPLIST
 tar cfz $HOME/$PROJECT-$VERSION$SUFFIX.tgz . $SKIPLIST || true

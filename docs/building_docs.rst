@@ -27,7 +27,7 @@ running the local build
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 At this moment it is enough to run ./clean_build.sh
-Result will be produced in docs/html
+Result will be produced in out/html
 
 
 
