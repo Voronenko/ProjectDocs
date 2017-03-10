@@ -7,10 +7,10 @@ Babel==2.2.0
 Jinja2==2.8
 MarkupSafe==0.23
 Pygments==2.0.2
-Sphinx==1.3.4
+Sphinx==1.5.3
 alabaster==0.7.7
 arrow==0.7.0
-cloud-sptheme==1.7.1
+cloud-sptheme==1.8.3
 docutils==0.12
 humanize==0.5.1
 pytz==2015.7

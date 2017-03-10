@@ -11,6 +11,11 @@ from datetime import datetime
 import sphinx.environment
 from docutils.utils import get_source_line
 
+# custom builders
+import os, sys
+sys.path.append(os.path.abspath('../code/doc_builders'))
+# /custom builders
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -29,6 +34,7 @@ extensions = [
 # comment if you don't have in the system
     'sphinxcontrib.plantuml',
     'cloud_sptheme.ext.table_styling',
+    'mobi'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -70,7 +76,7 @@ release = version
 # A list of glob-style patterns that should be excluded when looking for source
 # files. They are matched against the source file names relative to the source
 # directory, using slashesas directory separators on all platforms.
-exclude_patterns = ['slides']
+exclude_patterns = ['slides', '.doctrees']
 
 # The reST default role (used for this markup: `text`) to use for all documents
 #default_role = None
@@ -93,13 +99,24 @@ pygments_style = 'sphinx'
 # WARNING - PATCH - REMOVE ONCE YOU HAVE SUPPORT FOR suppress_warnings
 
 def _warn_node(self, msg, node, **kwargs):
-    if not msg.startswith('nonlocal image URI found:'):
+    skip = False
+    print "Hello world!"
+    if msg.startswith('nonlocal image URI found:'):
+        skip = True
+    if "directive 'table' is already registered" in msg:
+        skip = True
+
+    if not skip:
         self._warnfunc(msg, '%s:%s' % get_source_line(node), **kwargs)
 
 sphinx.environment.BuildEnvironment.warn_node = _warn_node
 
 # Suppress specific warnings
-suppress_warnings = ['image.nonlocal_uri']
+suppress_warnings = [
+    'image.nonlocal_uri',
+    'app.add_directive', # supress while setting up extension cloud_sptheme.ext.table_styling: directive 'table' is already registered, it will be overridden
+    'epub.unknown_project_files',
+    'mobi.unknown_project_files']
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
@@ -118,7 +135,7 @@ html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom themes here, relative to this directory.
 import sphinx_rtd_theme
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path(),os.path.abspath('./_themes')]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -220,3 +237,8 @@ latex_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 #intersphinx_mapping = {'http://docs.python.org/': None}
+
+
+# mobile support
+
+mobi_theme = 'mobi'

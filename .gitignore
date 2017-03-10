@@ -5,7 +5,8 @@ _buildinfo.txt
 *.tgz
 
 /p-env/
-docs/html/
+docs/out/*
+out/*
 .idea
 .Python
 pip-selfcheck.json

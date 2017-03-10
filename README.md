@@ -147,3 +147,92 @@ echo docker exec -it projectdocs bash -c "export DOCKER_UID=${DOCKER_UID} && exp
 docker exec -it projectdocs bash -c "export DOCKER_UID=${DOCKER_UID} && export DOCKER_USER=${DOCKER_USER} && /opt/sphinxproject/docker_entry_point.sh"
 
 ```
+
+
+Building epub project
+=====================
+
+make epub
+
+
+Building kindle project
+=======================
+
+make mobi
+
+The following configuration values can be used in `conf.py`. At a minimum, you must set the *mobi\_theme* option:
+
+mobi\_add\_visible\_links  
+Whether or not to write out the full text of a hyperlink next to the link itself. If the document will be read on paper (or printed), it is a good idea to set this to `True`.
+
+Default: `True`
+
+mobi\_author  
+The author of the book.
+
+> Default: `'unknown'`
+
+mobi\_basename  
+The basename of the output file (the part of the filename that precedes `.mobi`)
+
+> Default: The project name, with spaces removed.
+
+mobi\_copyright  
+The copyright holder of the book.
+
+> Default: The value of **copyright** in `conf.py`
+
+mobi\_cover  
+The cover image for the book. This should be in `.jpg` format.
+
+> Default: No cover image is used.
+
+mobi\_exclude\_files  
+
+> Default: no files are excluded.
+
+mobi\_identifier  
+
+> Default: `'unknown'`
+
+mobi\_language  
+
+> Default: The value of *language* in `conf.py`, or `'en'` if *language* is not set.
+
+mobi\_post\_files  
+
+> Default: no post files are used.
+
+mobi\_pre\_files  
+
+> Default: no pre files are used.
+
+mobi\_publisher  
+The publisher name for the book.
+
+> Default: `'unknown'`
+
+mobi\_scheme  
+
+> Default: `'unknown'`
+
+mobi\_theme  
+*Required*. The mobi theme-file to use. If you don’t have a theme of your own, use the `epub` theme:
+
+    mobi_theme = 'epub'
+
+mobi\_title  
+
+> Default: The value of *html\_title* in `conf.py`.
+
+mobi\_tocdepth  
+
+> Default: `3`.
+
+mobi\_tocdup  
+
+> Default: `True`
+
+mobi\_uid  
+
+> Default: `'unknown'`
