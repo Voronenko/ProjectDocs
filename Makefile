@@ -4,10 +4,10 @@ python = python2.7
 
 all: p-env/bin/pip docs
 
-docs: docs/html/index.html
+docs: out/html/index.html
 
-docs/html/index.html: README.rst docs/_static/css/* docs/_templates/* p-env/bin/sphinx-build docs_sources preprocess_sources
-	@p-env/bin/sphinx-build -W docs docs/html
+out/html/index.html: README.rst docs/_static/css/* docs/_templates/* p-env/bin/sphinx-build docs_sources preprocess_sources
+	@p-env/bin/sphinx-build -W docs out/html
 	@touch $@
 	@echo "Documentation was generated at '$@'."
 
@@ -34,9 +34,21 @@ p-env/bin/python:
 
 
 clean: clean_generated
-	@rm -rf .Python p-env docs/html
+	@rm -rf .Python p-env out
 
 clean_generated:
 	@find -type f -iname '*_generated.rst' -delete
 
 .PHONY: all docs clean preprocess_sources
+
+epub: README.rst docs/_static/css/* docs/_templates/* p-env/bin/sphinx-build docs_sources preprocess_sources
+	@p-env/bin/sphinx-build -b epub -W docs -Q -D exclude_patterns=['**/*.doctrees*'] out/epub
+	@echo "Build finished. The e-Pub pages are generated at 'out/epub'."
+
+mobi: README.rst docs/_static/css/* docs/_templates/* p-env/bin/sphinx-build docs_sources preprocess_sources
+	@p-env/bin/sphinx-build -b mobi -W docs -Q -D exclude_patterns=['**/*.doctrees*'] out/mobi
+	@echo "Build finished. The Mobi pages are generated at 'out/mobi'."
+
+pdf: README.rst docs/_static/css/* docs/_templates/* p-env/bin/sphinx-build docs_sources preprocess_sources
+	@p-env/bin/sphinx-build -b pdf -W docs -Q -D exclude_patterns=['**/*.doctrees*'] out/pdf
+	@echo "Build finished. The Pdf pages are generated at 'out/pdf'."

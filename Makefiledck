@@ -6,12 +6,12 @@ HOSTGROUP := $(GROUP_ID)
 
 all: pip docs
 
-docs: docs/html/index.html
+docs: out/html/index.html
 
-docs/html/index.html: README.rst docs/_static/css/* docs/_templates/* sphinx-build docs_sources preprocess_sources
-	@sphinx-build -W docs docs/html
-#	@echo chown -R $(HOSTUSER):$(HOSTGROUP) docs/html
-	@chown -R 1000:1000 docs/html
+out/html/index.html: README.rst docs/_static/css/* docs/_templates/* sphinx-build docs_sources preprocess_sources
+	@sphinx-build -W docs docs/out/html
+#	@echo chown -R $(HOSTUSER):$(HOSTGROUP) docs/out
+	@chown -R 1000:1000 out
 	@touch $@
 	@echo "Documentation was generated at '$@'."
 
@@ -33,10 +33,10 @@ pip: python
 	pip install -r requirements.txt
 
 python:
-	@echo 
+	@echo
 
 clean: clean_generated
-	@rm -rf .Python p-env docs/html
+	@rm -rf .Python p-env out
 
 clean_generated:
 	@find -type f -iname '*_generated.rst' -delete
