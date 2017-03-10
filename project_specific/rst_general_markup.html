@@ -34,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="PROJECT NAME 1.0 documentation" href="../index.html"/>
         <link rel="up" title="PROJECT" href="index.html"/>
         <link rel="next" title="Codeblock’s examples" href="rst_codeblocks.html"/>
@@ -92,7 +95,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">PROJECT</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#using-the-sphinx-itself">Using the sphinx itself</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">Sphinx&#8217;s reStructuredText markup</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sphinx&#8217;s reStructuredText markup</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#paragraphs">Paragraphs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sections">Sections</a></li>
@@ -135,7 +138,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -149,7 +152,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/project_specific/rst_general_markup.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/project_specific/rst_general_markup.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -196,9 +199,9 @@ will be ignored in the HTML output.</p>
 <h3>Quoted paragraphs<a class="headerlink" href="#quoted-paragraphs" title="Permalink to this headline">¶</a></h3>
 <p>Quoted paragraphs are created by
 just indenting them more than the surrounding paragraphs:</p>
-<div class="highlight-python"><div class="highlight"><pre>Normal paragraph.
+<div class="highlight-default"><div class="highlight"><pre><span class="n">Normal</span> <span class="n">paragraph</span><span class="o">.</span>
 
-   Indented paragraph.
+   <span class="n">Indented</span> <span class="n">paragraph</span><span class="o">.</span>
 </pre></div>
 </div>
 <div class="admonition-this-is-a-style-convention admonition">
@@ -212,9 +215,9 @@ Do not use tabs.</p>
 <p>Line blocks are a way of preserving line breaks
 (the equivalent of using <code class="docutils literal"><span class="pre">Shift+Enter</span></code> to break a line
 in Microsoft Word or LibreOffice Writer):</p>
-<div class="highlight-python"><div class="highlight"><pre>| These lines are
-| broken exactly like in
-| the source file.
+<div class="highlight-default"><div class="highlight"><pre><span class="o">|</span> <span class="n">These</span> <span class="n">lines</span> <span class="n">are</span>
+<span class="o">|</span> <span class="n">broken</span> <span class="n">exactly</span> <span class="n">like</span> <span class="ow">in</span>
+<span class="o">|</span> <span class="n">the</span> <span class="n">source</span> <span class="n">file</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
@@ -223,8 +226,8 @@ in Microsoft Word or LibreOffice Writer):</p>
 <span id="rst-sections-ref"></span><h2>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h2>
 <p>Section are created by underlining (and optionally overlining)
 the section title with a punctuation character:</p>
-<div class="highlight-python"><div class="highlight"><pre>This is a heading
-=================
+<div class="highlight-default"><div class="highlight"><pre><span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">heading</span>
+<span class="o">=================</span>
 </pre></div>
 </div>
 <p>Any punctuation character can be used to define a section title.
@@ -285,12 +288,12 @@ Superscript is marked with <code class="docutils literal"><span class="pre">:sup
 but often not desired with subscripts &amp; superscripts.
 Backslash-escaped whitespace can be used;
 the whitespace will be removed from the processed document:</p>
-<div class="highlight-python"><div class="highlight"><pre>The chemical formula for molecular oxygen is O\ :sub:`2`.
+<div class="highlight-default"><div class="highlight"><pre>The chemical formula for molecular oxygen is O\ :sub:`2`.
 </pre></div>
 </div>
 <p>To improve the readability of the text, the use backslash-escapes is discouraged.
-If possible, use <a class="reference internal" href="#rst-substitutions-ref"><span>Substitutions</span></a> instead:</p>
-<div class="highlight-python"><div class="highlight"><pre>The chemical formula for pure water is |H2O|.
+If possible, use <a class="reference internal" href="#rst-substitutions-ref"><span class="std std-ref">Substitutions</span></a> instead:</p>
+<div class="highlight-default"><div class="highlight"><pre>The chemical formula for pure water is |H2O|.
 
 .. |H2O| replace:: H\ :sub:`2`\ O
 </pre></div>
@@ -305,21 +308,21 @@ If possible, use <a class="reference internal" href="#rst-substitutions-ref"><sp
 <h3>Bulleted lists<a class="headerlink" href="#bulleted-lists" title="Permalink to this headline">¶</a></h3>
 <p>List markup is natural:
 just place an asterisk at the start of a paragraph and indent properly:</p>
-<div class="highlight-python"><div class="highlight"><pre>*  This is a bulleted list.
-*  It has two items, the second
-   item uses two lines.
+<div class="highlight-default"><div class="highlight"><pre><span class="o">*</span>  <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">bulleted</span> <span class="nb">list</span><span class="o">.</span>
+<span class="o">*</span>  <span class="n">It</span> <span class="n">has</span> <span class="n">two</span> <span class="n">items</span><span class="p">,</span> <span class="n">the</span> <span class="n">second</span>
+   <span class="n">item</span> <span class="n">uses</span> <span class="n">two</span> <span class="n">lines</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Nested lists are possible,
 but be aware that they must be separated
 from the parent list items by blank lines:</p>
-<div class="highlight-python"><div class="highlight"><pre>* this is
-* a list
+<div class="highlight-default"><div class="highlight"><pre><span class="o">*</span> <span class="n">this</span> <span class="ow">is</span>
+<span class="o">*</span> <span class="n">a</span> <span class="nb">list</span>
 
-  * with a nested list
-  * and some sub-items
+  <span class="o">*</span> <span class="k">with</span> <span class="n">a</span> <span class="n">nested</span> <span class="nb">list</span>
+  <span class="o">*</span> <span class="ow">and</span> <span class="n">some</span> <span class="n">sub</span><span class="o">-</span><span class="n">items</span>
 
-* and here the parent list continues
+<span class="o">*</span> <span class="ow">and</span> <span class="n">here</span> <span class="n">the</span> <span class="n">parent</span> <span class="nb">list</span> <span class="n">continues</span>
 </pre></div>
 </div>
 </div>
@@ -327,29 +330,29 @@ from the parent list items by blank lines:</p>
 <h3>Numbered lists<a class="headerlink" href="#numbered-lists" title="Permalink to this headline">¶</a></h3>
 <p>The same goes for numbered lists;
 they can also be auto-numbered using a <code class="docutils literal"><span class="pre">#</span></code> sign:</p>
-<div class="highlight-python"><div class="highlight"><pre>1. This is a numbered list.
-2. It has two items too.
+<div class="highlight-default"><div class="highlight"><pre><span class="mf">1.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">numbered</span> <span class="nb">list</span><span class="o">.</span>
+<span class="mf">2.</span> <span class="n">It</span> <span class="n">has</span> <span class="n">two</span> <span class="n">items</span> <span class="n">too</span><span class="o">.</span>
 
-#. This is a numbered list.
-#. It has two items too.
+<span class="c">#. This is a numbered list.</span>
+<span class="c">#. It has two items too.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="definition-lists">
 <span id="rst-definitionlists-ref"></span><h3>Definition lists<a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h3>
 <p>Definition lists are created as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>term (up to a line of text)
-   Definition of the term, which must be indented
+<div class="highlight-default"><div class="highlight"><pre><span class="n">term</span> <span class="p">(</span><span class="n">up</span> <span class="n">to</span> <span class="n">a</span> <span class="n">line</span> <span class="n">of</span> <span class="n">text</span><span class="p">)</span>
+   <span class="n">Definition</span> <span class="n">of</span> <span class="n">the</span> <span class="n">term</span><span class="p">,</span> <span class="n">which</span> <span class="n">must</span> <span class="n">be</span> <span class="n">indented</span>
 
-   and can even consist of multiple paragraphs
+   <span class="ow">and</span> <span class="n">can</span> <span class="n">even</span> <span class="n">consist</span> <span class="n">of</span> <span class="n">multiple</span> <span class="n">paragraphs</span>
 
-next term
-   Description.
+<span class="nb">next</span> <span class="n">term</span>
+   <span class="n">Description</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>The Sphinx documentation generator
 provides a more flexible alternative to definition lists
-(see <a class="reference internal" href="#rst-glossaries-ref"><span>Glossaries</span></a>).</p>
+(see <a class="reference internal" href="#rst-glossaries-ref"><span class="std std-ref">Glossaries</span></a>).</p>
 </div>
 <div class="section" id="glossaries">
 <span id="rst-glossaries-ref"></span><h3>Glossaries<a class="headerlink" href="#glossaries" title="Permalink to this headline">¶</a></h3>
@@ -357,39 +360,39 @@ provides a more flexible alternative to definition lists
 contains a reST definition-list-like markup
 with terms and definitions.</p>
 <p>See the following example:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. glossary::
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">glossary</span><span class="p">::</span>
 
-   environment
-      A structure where information about all documents under the root is
-      saved, and used for cross-referencing.  The environment is pickled
-      after the parsing stage, so that successive runs only need to read
-      and parse new and changed documents.
+   <span class="n">environment</span>
+      <span class="n">A</span> <span class="n">structure</span> <span class="n">where</span> <span class="n">information</span> <span class="n">about</span> <span class="nb">all</span> <span class="n">documents</span> <span class="n">under</span> <span class="n">the</span> <span class="n">root</span> <span class="ow">is</span>
+      <span class="n">saved</span><span class="p">,</span> <span class="ow">and</span> <span class="n">used</span> <span class="k">for</span> <span class="n">cross</span><span class="o">-</span><span class="n">referencing</span><span class="o">.</span>  <span class="n">The</span> <span class="n">environment</span> <span class="ow">is</span> <span class="n">pickled</span>
+      <span class="n">after</span> <span class="n">the</span> <span class="n">parsing</span> <span class="n">stage</span><span class="p">,</span> <span class="n">so</span> <span class="n">that</span> <span class="n">successive</span> <span class="n">runs</span> <span class="n">only</span> <span class="n">need</span> <span class="n">to</span> <span class="n">read</span>
+      <span class="ow">and</span> <span class="n">parse</span> <span class="n">new</span> <span class="ow">and</span> <span class="n">changed</span> <span class="n">documents</span><span class="o">.</span>
 
-   source directory
-      The directory which, including its subdirectories, contains all
-      source files for one Sphinx project.
+   <span class="n">source</span> <span class="n">directory</span>
+      <span class="n">The</span> <span class="n">directory</span> <span class="n">which</span><span class="p">,</span> <span class="n">including</span> <span class="n">its</span> <span class="n">subdirectories</span><span class="p">,</span> <span class="n">contains</span> <span class="nb">all</span>
+      <span class="n">source</span> <span class="n">files</span> <span class="k">for</span> <span class="n">one</span> <span class="n">Sphinx</span> <span class="n">project</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>The definitions will then be used in cross-references with the <code class="docutils literal"><span class="pre">:term:</span></code> role.
 For example:</p>
-<div class="highlight-python"><div class="highlight"><pre>The :term:`source directory` for this project is ...
+<div class="highlight-default"><div class="highlight"><pre>The :term:`source directory` for this project is ...
 </pre></div>
 </div>
 <p>In contrast to regular definition lists,
 a glossary supports <em>multiple</em> terms per entry
 and inline markup is allowed in terms.
 You can link to all of the terms.  For example:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. glossary::
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">glossary</span><span class="p">::</span>
 
-   term 1
-   term 2
-      Definition of both terms.
+   <span class="n">term</span> <span class="mi">1</span>
+   <span class="n">term</span> <span class="mi">2</span>
+      <span class="n">Definition</span> <span class="n">of</span> <span class="n">both</span> <span class="n">terms</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>When the glossary is sorted, the first term determines the sort order.</p>
 <p>To automatically sort a glossary, include the following flag:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. glossary::
-   :sorted:
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">glossary</span><span class="p">::</span>
+   <span class="p">:</span><span class="nb">sorted</span><span class="p">:</span>
 </pre></div>
 </div>
 </div>
@@ -398,16 +401,16 @@ You can link to all of the terms.  For example:</p>
 <p>Field lists are two-column table-like structures
 resembling database records (label &amp; data pairs).
 For example:</p>
-<div class="highlight-python"><div class="highlight"><pre>:Date: 2001-08-16
-:Version: 1
-:Authors: - Me
-          - Myself
-          - I
-:Indentation: Since the field marker may be quite long, the second
-   and subsequent lines of the field body do not have to line up
-   with the first line, but they must be indented relative to the
-   field name marker, and they must line up with each other.
-:Parameter i: integer
+<div class="highlight-default"><div class="highlight"><pre><span class="p">:</span><span class="n">Date</span><span class="p">:</span> <span class="mi">2001</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">16</span>
+<span class="p">:</span><span class="n">Version</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">:</span><span class="n">Authors</span><span class="p">:</span> <span class="o">-</span> <span class="n">Me</span>
+          <span class="o">-</span> <span class="n">Myself</span>
+          <span class="o">-</span> <span class="n">I</span>
+<span class="p">:</span><span class="n">Indentation</span><span class="p">:</span> <span class="n">Since</span> <span class="n">the</span> <span class="n">field</span> <span class="n">marker</span> <span class="n">may</span> <span class="n">be</span> <span class="n">quite</span> <span class="n">long</span><span class="p">,</span> <span class="n">the</span> <span class="n">second</span>
+   <span class="ow">and</span> <span class="n">subsequent</span> <span class="n">lines</span> <span class="n">of</span> <span class="n">the</span> <span class="n">field</span> <span class="n">body</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">to</span> <span class="n">line</span> <span class="n">up</span>
+   <span class="k">with</span> <span class="n">the</span> <span class="n">first</span> <span class="n">line</span><span class="p">,</span> <span class="n">but</span> <span class="n">they</span> <span class="n">must</span> <span class="n">be</span> <span class="n">indented</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">the</span>
+   <span class="n">field</span> <span class="n">name</span> <span class="n">marker</span><span class="p">,</span> <span class="ow">and</span> <span class="n">they</span> <span class="n">must</span> <span class="n">line</span> <span class="n">up</span> <span class="k">with</span> <span class="n">each</span> <span class="n">other</span><span class="o">.</span>
+<span class="p">:</span><span class="n">Parameter</span> <span class="n">i</span><span class="p">:</span> <span class="n">integer</span>
 </pre></div>
 </div>
 <div class="admonition-this-is-a-style-convention admonition">
@@ -418,24 +421,24 @@ field lists are used to include metadata in each document.</p>
 could be included in the very beginning of each document
 (like a header to the text file),
 like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. metadata-placeholder
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">metadata</span><span class="o">-</span><span class="n">placeholder</span>
 
-:DC.Title:
-   Document title
-:DC.Creator:
-   Author
-:DC.Date:
-   Date yyyy-mm-dd
-:DC.Description:
-   Abstract
-:DC.Language:
-   en
-:DC.Format:
-   text/x-rst
-:DC.Rights:
-   Access rights
-:DC.RightsHolder:
-   Copyright.
+<span class="p">:</span><span class="n">DC</span><span class="o">.</span><span class="n">Title</span><span class="p">:</span>
+   <span class="n">Document</span> <span class="n">title</span>
+<span class="p">:</span><span class="n">DC</span><span class="o">.</span><span class="n">Creator</span><span class="p">:</span>
+   <span class="n">Author</span>
+<span class="p">:</span><span class="n">DC</span><span class="o">.</span><span class="n">Date</span><span class="p">:</span>
+   <span class="n">Date</span> <span class="n">yyyy</span><span class="o">-</span><span class="n">mm</span><span class="o">-</span><span class="n">dd</span>
+<span class="p">:</span><span class="n">DC</span><span class="o">.</span><span class="n">Description</span><span class="p">:</span>
+   <span class="n">Abstract</span>
+<span class="p">:</span><span class="n">DC</span><span class="o">.</span><span class="n">Language</span><span class="p">:</span>
+   <span class="n">en</span>
+<span class="p">:</span><span class="n">DC</span><span class="o">.</span><span class="n">Format</span><span class="p">:</span>
+   <span class="n">text</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">rst</span>
+<span class="p">:</span><span class="n">DC</span><span class="o">.</span><span class="n">Rights</span><span class="p">:</span>
+   <span class="n">Access</span> <span class="n">rights</span>
+<span class="p">:</span><span class="n">DC</span><span class="o">.</span><span class="n">RightsHolder</span><span class="p">:</span>
+   <span class="n">Copyright</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Note that these metadata field names
@@ -466,34 +469,34 @@ table of contents for the file.</li>
 For <em>grid tables</em>,
 you have to &#8220;paint&#8221; the cell grid yourself.
 They look like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>+------------------------+------------+----------+----------+
-| Header row, column 1   | Header 2   | Header 3 | Header 4 |
-| (header rows optional) |            |          |          |
-+========================+============+==========+==========+
-| body row 1, column 1   | column 2   | column 3 | column 4 |
-+------------------------+------------+----------+----------+
-| body row 2             | ...        | ...      |          |
-+------------------------+------------+----------+----------+
+<div class="highlight-default"><div class="highlight"><pre><span class="o">+------------------------+------------+----------+----------+</span>
+<span class="o">|</span> <span class="n">Header</span> <span class="n">row</span><span class="p">,</span> <span class="n">column</span> <span class="mi">1</span>   <span class="o">|</span> <span class="n">Header</span> <span class="mi">2</span>   <span class="o">|</span> <span class="n">Header</span> <span class="mi">3</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">4</span> <span class="o">|</span>
+<span class="o">|</span> <span class="p">(</span><span class="n">header</span> <span class="n">rows</span> <span class="n">optional</span><span class="p">)</span> <span class="o">|</span>            <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>
+<span class="o">+========================+============+==========+==========+</span>
+<span class="o">|</span> <span class="n">body</span> <span class="n">row</span> <span class="mi">1</span><span class="p">,</span> <span class="n">column</span> <span class="mi">1</span>   <span class="o">|</span> <span class="n">column</span> <span class="mi">2</span>   <span class="o">|</span> <span class="n">column</span> <span class="mi">3</span> <span class="o">|</span> <span class="n">column</span> <span class="mi">4</span> <span class="o">|</span>
+<span class="o">+------------------------+------------+----------+----------+</span>
+<span class="o">|</span> <span class="n">body</span> <span class="n">row</span> <span class="mi">2</span>             <span class="o">|</span> <span class="o">...</span>        <span class="o">|</span> <span class="o">...</span>      <span class="o">|</span>          <span class="o">|</span>
+<span class="o">+------------------------+------------+----------+----------+</span>
 </pre></div>
 </div>
 <p><em>Simple tables</em> are easier to write, but limited:
 they must contain more than one row,
 and the first column cannot contain multiple lines.
 They look like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>=====  =====  =======
-A      B      A and B
-=====  =====  =======
-False  False  False
-True   False  False
-False  True   False
-True   True   True
-=====  =====  =======
+<div class="highlight-default"><div class="highlight"><pre><span class="o">=====</span>  <span class="o">=====</span>  <span class="o">=======</span>
+<span class="n">A</span>      <span class="n">B</span>      <span class="n">A</span> <span class="ow">and</span> <span class="n">B</span>
+<span class="o">=====</span>  <span class="o">=====</span>  <span class="o">=======</span>
+<span class="k">False</span>  <span class="k">False</span>  <span class="k">False</span>
+<span class="k">True</span>   <span class="k">False</span>  <span class="k">False</span>
+<span class="k">False</span>  <span class="k">True</span>   <span class="k">False</span>
+<span class="k">True</span>   <span class="k">True</span>   <span class="k">True</span>
+<span class="o">=====</span>  <span class="o">=====</span>  <span class="o">=======</span>
 </pre></div>
 </div>
 <div class="admonition-this-is-a-tip admonition">
 <p class="first admonition-title">This is a tip.</p>
 <p>These are the basic types of tables, which are rather clumsy.
-Also available (and easier to use) are <a class="reference internal" href="#rst-specialtables-ref"><span>special tables</span></a>,
+Also available (and easier to use) are <a class="reference internal" href="#rst-specialtables-ref"><span class="std std-ref">special tables</span></a>,
 namely list-tables and CSV-tables.</p>
 <p class="last">An exceltable extension can also be used with Sphinx,
 which allows the inclusion of <code class="docutils literal"><span class="pre">XLS</span></code> spreadsheets,
@@ -509,7 +512,7 @@ If the link text should be the web address,
 you don&#8217;t need special markup at all,
 the parser finds links and mail addresses in ordinary text (with no markup).</p>
 <p>You can also separate the link and the target definition, like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>This is a paragraph that contains `a link`_.
+<div class="highlight-default"><div class="highlight"><pre>This is a paragraph that contains `a link`_.
 
 .. _a link: http://example.com/
 </pre></div>
@@ -535,7 +538,7 @@ There are two ways in which you can refer to labels:</p>
 <li><p class="first">If you place a label directly before a section title,
 you can reference to it with <code class="docutils literal"><span class="pre">:ref:`label-name`</span></code>.
 Example:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. _my-label-ref:
+<div class="highlight-default"><div class="highlight"><pre>.. _my-label-ref:
 
 Section to cross-reference
 --------------------------
@@ -549,18 +552,18 @@ In the end of this phrase is a reference to the section title, see :ref:`my-labe
 with the link  title being &#8220;Section to cross-reference&#8221;.
 This works just as well
 when section and reference are in different source files.</p>
-<p>Automatic labels also work with <a class="reference internal" href="#rst-figures-ref"><span>figures</span></a>:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. _my-figure-ref:
+<p>Automatic labels also work with <a class="reference internal" href="#rst-figures-ref"><span class="std std-ref">figures</span></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">_my</span><span class="o">-</span><span class="n">figure</span><span class="o">-</span><span class="n">ref</span><span class="p">:</span>
 
-.. figure:: my-image.png
+<span class="o">..</span> <span class="n">figure</span><span class="p">::</span> <span class="n">my</span><span class="o">-</span><span class="n">image</span><span class="o">.</span><span class="n">png</span>
 
-   My figure caption
+   <span class="n">My</span> <span class="n">figure</span> <span class="n">caption</span>
 </pre></div>
 </div>
 <p>A reference like <code class="docutils literal"><span class="pre">:ref:`my-figure-ref`</span></code>
 would insert a reference to the figure
 with link text &#8220;My figure caption&#8221;.</p>
-<p>The same works for <a class="reference internal" href="#rst-specialtables-ref"><span>tables</span></a>
+<p>The same works for <a class="reference internal" href="#rst-specialtables-ref"><span class="std std-ref">tables</span></a>
 that are given an explicit caption using the <code class="docutils literal"><span class="pre">table</span></code> directive.</p>
 </li>
 <li><p class="first">Labels that aren&#8217;t placed before a section title can still be referenced
@@ -579,14 +582,14 @@ headings are changed, and for all builders that support cross-references.</p>
 paragraph with the special marker <code class="docutils literal"><span class="pre">::</span></code>.
 The literal block must be indented
 (and, like all paragraphs, separated from the surrounding ones by blank lines):</p>
-<div class="highlight-python"><div class="highlight"><pre>This is a normal text paragraph. The next paragraph is a code sample::
+<div class="highlight-default"><div class="highlight"><pre><span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">normal</span> <span class="n">text</span> <span class="n">paragraph</span><span class="o">.</span> <span class="n">The</span> <span class="nb">next</span> <span class="n">paragraph</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">code</span> <span class="n">sample</span><span class="p">::</span>
 
-   It is not processed in any way, except
-   that the indentation is removed.
+   <span class="n">It</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">processed</span> <span class="ow">in</span> <span class="nb">any</span> <span class="n">way</span><span class="p">,</span> <span class="k">except</span>
+   <span class="n">that</span> <span class="n">the</span> <span class="n">indentation</span> <span class="ow">is</span> <span class="n">removed</span><span class="o">.</span>
 
-   It can span multiple lines.
+   <span class="n">It</span> <span class="n">can</span> <span class="n">span</span> <span class="n">multiple</span> <span class="n">lines</span><span class="o">.</span>
 
-This is a normal text paragraph again.
+<span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">normal</span> <span class="n">text</span> <span class="n">paragraph</span> <span class="n">again</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>The handling of the <code class="docutils literal"><span class="pre">::</span></code> marker is smart:</p>
@@ -623,8 +626,8 @@ but it is intuitive enough when you write it.)</p>
 and is indented relative to the directive start.</p>
 <p>Basically, a directive consists of a name, arguments, options and content.</p>
 <p>Look at this example:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. contents:: This is my Table of Contents
-   :depth: 2
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">contents</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">Table</span> <span class="n">of</span> <span class="n">Contents</span>
+   <span class="p">:</span><span class="n">depth</span><span class="p">:</span> <span class="mi">2</span>
 </pre></div>
 </div>
 <p>The directive starts with <code class="docutils literal"><span class="pre">..</span></code> followed by one whitespace.
@@ -659,7 +662,7 @@ that won&#8217;t be included in any table of contents;</li>
 useful to generate an outer <code class="docutils literal"><span class="pre">``&lt;div&gt;``</span></code> in HTML output.</li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rst-specialtables-ref"><span>Special tables</span></a>:<ul>
+<li><a class="reference internal" href="#rst-specialtables-ref"><span class="std std-ref">Special tables</span></a>:<ul>
 <li><code class="docutils literal"><span class="pre">table</span></code>   -  a table with title;</li>
 <li><code class="docutils literal"><span class="pre">csv-table</span></code>  -  a table generated from comma-separated values;</li>
 <li><code class="docutils literal"><span class="pre">list-table</span></code> -  a table generated from a list of lists.</li>
@@ -679,18 +682,18 @@ useful to generate an outer <code class="docutils literal"><span class="pre">``&
 use the directive <code class="docutils literal"><span class="pre">contents</span></code>.
 The following example creates a local table of contents
 with a maximum of two levels (below the level where it is located):</p>
-<div class="highlight-python"><div class="highlight"><pre>Part II
-#######
+<div class="highlight-default"><div class="highlight"><pre><span class="n">Part</span> <span class="n">II</span>
+<span class="c">#######</span>
 
-Chapter 1
-*********
+<span class="n">Chapter</span> <span class="mi">1</span>
+<span class="o">*********</span>
 
-.. contents::
-   :depth: 2
-   :local:
+<span class="o">..</span> <span class="n">contents</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">depth</span><span class="p">:</span> <span class="mi">2</span>
+   <span class="p">:</span><span class="n">local</span><span class="p">:</span>
 
-Heading 1
-=========
+<span class="n">Heading</span> <span class="mi">1</span>
+<span class="o">=========</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">toctree</span></code> directive creates a table of contents
@@ -699,15 +702,15 @@ The following example creates a table of contents
 from the sections of various documents (up to a depth of 3 levels).
 The <code class="docutils literal"><span class="pre">:glob:</span></code> option allows all documents in the &#8216;chapter2&#8217; folder
 to be included (sorted according to their name):</p>
-<div class="highlight-python"><div class="highlight"><pre>.. toctree::
-   :glob:
-   :maxdepth: 3
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">glob</span><span class="p">:</span>
+   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">3</span>
 
-   preamble
-   chapter1/part1
-   chapter1/conclusion
-   chapter2/*
-   references
+   <span class="n">preamble</span>
+   <span class="n">chapter1</span><span class="o">/</span><span class="n">part1</span>
+   <span class="n">chapter1</span><span class="o">/</span><span class="n">conclusion</span>
+   <span class="n">chapter2</span><span class="o">/*</span>
+   <span class="n">references</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -723,8 +726,8 @@ in the beggining of the document restricts the number of levels to 3.</p>
 <div class="section" id="images">
 <span id="rst-images-ref"></span><h3>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
 <p>reST supports an image directive, used like so:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. image:: gnu.png
-   (options)
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">gnu</span><span class="o">.</span><span class="n">png</span>
+   <span class="p">(</span><span class="n">options</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The file name given (here <code class="docutils literal"><span class="pre">gnu.png</span></code>)
@@ -744,25 +747,25 @@ as that will best support output to different formats
 <p>A <code class="docutils literal"><span class="pre">figure</span></code> consists of image data (including image options),
 an optional caption (a single paragraph),
 and an optional legend (arbitrary body elements):</p>
-<div class="highlight-python"><div class="highlight"><pre>.. figure:: picture.png
-   :scale: 50 %
-   :alt: map to buried treasure
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">figure</span><span class="p">::</span> <span class="n">picture</span><span class="o">.</span><span class="n">png</span>
+   <span class="p">:</span><span class="n">scale</span><span class="p">:</span> <span class="mi">50</span> <span class="o">%</span>
+   <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="nb">map</span> <span class="n">to</span> <span class="n">buried</span> <span class="n">treasure</span>
 
-   This is the caption of the figure (a simple paragraph).
+   <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">caption</span> <span class="n">of</span> <span class="n">the</span> <span class="n">figure</span> <span class="p">(</span><span class="n">a</span> <span class="n">simple</span> <span class="n">paragraph</span><span class="p">)</span><span class="o">.</span>
 
-   The legend consists of all elements after the caption.  In this
-   case, the legend consists of this paragraph and the following
-   table:
+   <span class="n">The</span> <span class="n">legend</span> <span class="n">consists</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">elements</span> <span class="n">after</span> <span class="n">the</span> <span class="n">caption</span><span class="o">.</span>  <span class="n">In</span> <span class="n">this</span>
+   <span class="n">case</span><span class="p">,</span> <span class="n">the</span> <span class="n">legend</span> <span class="n">consists</span> <span class="n">of</span> <span class="n">this</span> <span class="n">paragraph</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">following</span>
+   <span class="n">table</span><span class="p">:</span>
 
-   +-----------------------+-----------------------+
-   | Symbol                | Meaning               |
-   +=======================+=======================+
-   | .. image:: tent.png   | Campground            |
-   +-----------------------+-----------------------+
-   | .. image:: waves.png  | Lake                  |
-   +-----------------------+-----------------------+
-   | .. image:: peak.png   | Mountain              |
-   +-----------------------+-----------------------+
+   <span class="o">+-----------------------+-----------------------+</span>
+   <span class="o">|</span> <span class="n">Symbol</span>                <span class="o">|</span> <span class="n">Meaning</span>               <span class="o">|</span>
+   <span class="o">+=======================+=======================+</span>
+   <span class="o">|</span> <span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">tent</span><span class="o">.</span><span class="n">png</span>   <span class="o">|</span> <span class="n">Campground</span>            <span class="o">|</span>
+   <span class="o">+-----------------------+-----------------------+</span>
+   <span class="o">|</span> <span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">waves</span><span class="o">.</span><span class="n">png</span>  <span class="o">|</span> <span class="n">Lake</span>                  <span class="o">|</span>
+   <span class="o">+-----------------------+-----------------------+</span>
+   <span class="o">|</span> <span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">peak</span><span class="o">.</span><span class="n">png</span>   <span class="o">|</span> <span class="n">Mountain</span>              <span class="o">|</span>
+   <span class="o">+-----------------------+-----------------------+</span>
 </pre></div>
 </div>
 <p>There must be blank lines before the caption paragraph and before the legend.
@@ -772,60 +775,60 @@ use an empty comment (<code class="docutils literal"><span class="pre">..</span>
 <div class="section" id="special-tables">
 <span id="rst-specialtables-ref"></span><h3>Special tables<a class="headerlink" href="#special-tables" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">table</span></code> directive associates a title with the following table:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. table:: User list
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">table</span><span class="p">::</span> <span class="n">User</span> <span class="nb">list</span>
 
-   ==========  =========
-   First name  Last name
-   ==========  =========
-   John        Doe
-   Jane        Dove
-   ==========  =========
+   <span class="o">==========</span>  <span class="o">=========</span>
+   <span class="n">First</span> <span class="n">name</span>  <span class="n">Last</span> <span class="n">name</span>
+   <span class="o">==========</span>  <span class="o">=========</span>
+   <span class="n">John</span>        <span class="n">Doe</span>
+   <span class="n">Jane</span>        <span class="n">Dove</span>
+   <span class="o">==========</span>  <span class="o">=========</span>
 </pre></div>
 </div>
 <p>A <code class="docutils literal"><span class="pre">list-table</span></code> is created from a uniform two-level bullet list:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. list-table:: User list
-   :header-rows:1
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="nb">list</span><span class="o">-</span><span class="n">table</span><span class="p">::</span> <span class="n">User</span> <span class="nb">list</span>
+   <span class="p">:</span><span class="n">header</span><span class="o">-</span><span class="n">rows</span><span class="p">:</span><span class="mi">1</span>
 
-   *  - First name
-      - Last name
-   *  - John
-      - Doe
-   *  - Jane
-      - Dove
+   <span class="o">*</span>  <span class="o">-</span> <span class="n">First</span> <span class="n">name</span>
+      <span class="o">-</span> <span class="n">Last</span> <span class="n">name</span>
+   <span class="o">*</span>  <span class="o">-</span> <span class="n">John</span>
+      <span class="o">-</span> <span class="n">Doe</span>
+   <span class="o">*</span>  <span class="o">-</span> <span class="n">Jane</span>
+      <span class="o">-</span> <span class="n">Dove</span>
 </pre></div>
 </div>
 <p>A <code class="docutils literal"><span class="pre">csv-table</span></code> is created from comma-separated values
 (either in the document or in an external file):</p>
-<div class="highlight-python"><div class="highlight"><pre>.. csv-table:: User list
-   :header:&quot;First name&quot;,&quot;Last name&quot;
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">csv</span><span class="o">-</span><span class="n">table</span><span class="p">::</span> <span class="n">User</span> <span class="nb">list</span>
+   <span class="p">:</span><span class="n">header</span><span class="p">:</span><span class="s">&quot;First name&quot;</span><span class="p">,</span><span class="s">&quot;Last name&quot;</span>
 
-   &quot;John&quot;,&quot;Doe&quot;
-   &quot;Jane&quot;,&quot;Dove&quot;
+   <span class="s">&quot;John&quot;</span><span class="p">,</span><span class="s">&quot;Doe&quot;</span>
+   <span class="s">&quot;Jane&quot;</span><span class="p">,</span><span class="s">&quot;Dove&quot;</span>
 </pre></div>
 </div>
 <p>Another example of <code class="docutils literal"><span class="pre">csv-table</span></code>, using and external file:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. csv-table:: Table 1 - Legend of the table goes here...
-   :header-rows: 1
-   :stub-columns: 1
-   :file: ../tables/table1.csv
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">csv</span><span class="o">-</span><span class="n">table</span><span class="p">::</span> <span class="n">Table</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">Legend</span> <span class="n">of</span> <span class="n">the</span> <span class="n">table</span> <span class="n">goes</span> <span class="n">here</span><span class="o">...</span>
+   <span class="p">:</span><span class="n">header</span><span class="o">-</span><span class="n">rows</span><span class="p">:</span> <span class="mi">1</span>
+   <span class="p">:</span><span class="n">stub</span><span class="o">-</span><span class="n">columns</span><span class="p">:</span> <span class="mi">1</span>
+   <span class="p">:</span><span class="n">file</span><span class="p">:</span> <span class="o">../</span><span class="n">tables</span><span class="o">/</span><span class="n">table1</span><span class="o">.</span><span class="n">csv</span>
 </pre></div>
 </div>
 <p>An <code class="docutils literal"><span class="pre">exceltable</span></code> can also be used:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. exceltable:: Table 1 - Legend of the table goes here...
-   :file: ../tables/tables.xls
-   :sheet: table1
-   :selection: A1:C20
-   :header: 1
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">exceltable</span><span class="p">::</span> <span class="n">Table</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">Legend</span> <span class="n">of</span> <span class="n">the</span> <span class="n">table</span> <span class="n">goes</span> <span class="n">here</span><span class="o">...</span>
+   <span class="p">:</span><span class="n">file</span><span class="p">:</span> <span class="o">../</span><span class="n">tables</span><span class="o">/</span><span class="n">tables</span><span class="o">.</span><span class="n">xls</span>
+   <span class="p">:</span><span class="n">sheet</span><span class="p">:</span> <span class="n">table1</span>
+   <span class="p">:</span><span class="n">selection</span><span class="p">:</span> <span class="n">A1</span><span class="p">:</span><span class="n">C20</span>
+   <span class="p">:</span><span class="n">header</span><span class="p">:</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p>Using Excel tables requires an additional module <cite>sphinxcontrib.exceltable</cite>
 that is an extension for Sphinx, that adds support for including spreadsheets, or part of them, into Sphinx document.
 It can be installed using pip:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install sphinxcontrib-exceltable
+<div class="highlight-default"><div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">exceltable</span>
 </pre></div>
 </div>
 <p>Then the project <code class="docutils literal"><span class="pre">conf.py</span></code> file needs to be updated:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># Add ``sphinxcontrib.exceltable`` into extension list</span>
+<div class="highlight-default"><div class="highlight"><pre><span class="c"># Add ``sphinxcontrib.exceltable`` into extension list</span>
 <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;sphinxcontrib.exceltable&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -836,12 +839,12 @@ It can be installed using pip:</p>
 <p>For footnotes, use <code class="docutils literal"><span class="pre">[#name]_</span></code> to mark the footnote
 location, and add the footnote body at the bottom of the document after a
 &#8220;Footnotes&#8221; rubric heading, like so:</p>
-<div class="highlight-python"><div class="highlight"><pre>Lorem ipsum [#first-footnote-name]_ dolor sit amet [#second-footnote-name]_
+<div class="highlight-default"><div class="highlight"><pre><span class="n">Lorem</span> <span class="n">ipsum</span> <span class="p">[</span><span class="c">#first-footnote-name]_ dolor sit amet [#second-footnote-name]_</span>
 
-.. rubric:: Footnotes
+<span class="o">..</span> <span class="n">rubric</span><span class="p">::</span> <span class="n">Footnotes</span>
 
-.. [#first-footnote-name] Text of the first footnote.
-.. [#fsecond-footnote-name] Text of the second footnote.
+<span class="o">..</span> <span class="p">[</span><span class="c">#first-footnote-name] Text of the first footnote.</span>
+<span class="o">..</span> <span class="p">[</span><span class="c">#fsecond-footnote-name] Text of the second footnote.</span>
 </pre></div>
 </div>
 <p>You can also explicitly number the footnotes (<code class="docutils literal"><span class="pre">[1]_</span></code>) or use auto-numbered
@@ -855,9 +858,9 @@ Instead, use short descriptive names (that simplify cross-referencing).</p>
 <div class="section" id="citations">
 <span id="rst-citations-ref"></span><h3>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h3>
 <p>Standard reST citations are supported:</p>
-<div class="highlight-python"><div class="highlight"><pre>Lorem ipsum [Ref]_ dolor sit amet.
+<div class="highlight-default"><div class="highlight"><pre><span class="n">Lorem</span> <span class="n">ipsum</span> <span class="p">[</span><span class="n">Ref</span><span class="p">]</span><span class="n">_</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span><span class="o">.</span>
 
-.. [Ref] Book or article reference, URL or whatever.
+<span class="o">..</span> <span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="n">Book</span> <span class="ow">or</span> <span class="n">article</span> <span class="n">reference</span><span class="p">,</span> <span class="n">URL</span> <span class="ow">or</span> <span class="n">whatever</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Citation usage is similar to footnote usage,
@@ -872,11 +875,11 @@ In this case, a separate file may be created (e.g. a <code class="docutils liter
 <p>reST supports &#8220;substitutions&#8221;,
 which are pieces of text and/or markup referred to in the text by <code class="docutils literal"><span class="pre">|name|</span></code>.
 They are defined like footnotes with explicit markup blocks, like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. |name| replace:: replacement *text*
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="o">|</span><span class="n">name</span><span class="o">|</span> <span class="n">replace</span><span class="p">::</span> <span class="n">replacement</span> <span class="o">*</span><span class="n">text</span><span class="o">*</span>
 </pre></div>
 </div>
 <p>or this:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. |caution| image:: warning.png
+<div class="highlight-default"><div class="highlight"><pre>.. |caution| image:: warning.png
              :alt: Warning!
 </pre></div>
 </div>
@@ -910,15 +913,15 @@ It is a design limitation: RST markup can not be nested. Period.</p>
 <p>Every explicit markup block
 which isn&#8217;t a valid markup construct is regarded as a comment.
 For example:</p>
-<div class="highlight-python"><div class="highlight"><pre>.. This is a comment.
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">comment</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>You can indent text after a comment start to form multiline comments:</p>
-<div class="highlight-python"><div class="highlight"><pre>..
-   This whole indented block
-   is a comment.
+<div class="highlight-default"><div class="highlight"><pre><span class="o">..</span>
+   <span class="n">This</span> <span class="n">whole</span> <span class="n">indented</span> <span class="n">block</span>
+   <span class="ow">is</span> <span class="n">a</span> <span class="n">comment</span><span class="o">.</span>
 
-   Still in the comment.
+   <span class="n">Still</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">comment</span><span class="o">.</span>
 </pre></div>
 </div>
 <div class="admonition-this-is-a-style-convention admonition">
