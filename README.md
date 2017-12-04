@@ -300,3 +300,10 @@ mobi\_tocdup
 mobi\_uid  
 
 > Default: `'unknown'`
+
+
+
+# Additional resources
+
+
+https://github.com/yoloseem/awesome-sphinxdoc
