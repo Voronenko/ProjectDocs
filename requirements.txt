@@ -25,3 +25,4 @@ sphinxcontrib-seqdiag==0.8.5
 sphinxcontrib-nwdiag==0.9.5
 sphinxcontrib-actdiag==0.8.5
 sphinxcontrib-plantuml==0.8.1
+Werkzeug==0.12.2

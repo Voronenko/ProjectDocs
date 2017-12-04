@@ -1,0 +1,194 @@
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+{%- set url_root = pathto('', 1) %}
+{# XXX necessary? #}
+{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
+{%- if not embedded and docstitle %}
+{%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
+{%- else %}
+{%- set titlesuffix = "" %}
+{%- endif %}
+
+{%- macro script() %}
+<script src="{{ pathto('_static/revealjs/js/jquery.min.js', 1) }}"></script>
+<script src="{{ pathto('_static/revealjs/lib/js/head.min.js', 1) }}"></script>
+<script src="{{ pathto('_static/revealjs/js/reveal.js', 1) }}"></script>
+{%- endmacro %}
+
+{%- macro css() %}
+<link rel="stylesheet" href="{{ pathto('_static/revealjs/css/reveal.css', 1) }}">
+<link rel="stylesheet" href="{{ pathto('_static/revealjs/css/theme/' + (revealjs_config_theme or 'black') + '.css', 1) }}" id="theme">
+<link rel="stylesheet" href="{{ pathto('_static/revealjs/lib/css/zenburn.css', 1) }}">
+<link rel="stylesheet" href="{{ pathto('_static/revealjs/' + style, 1) }}" type="text/css" />
+{%- for cssfile in css_files %}
+<link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+{%- endfor %}
+{%- endmacro %}
+
+<html lang="{{ revealjs_config_lang }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    {%- block htmltitle %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+    {%- endblock %}
+
+    {{ metatags }}
+
+    {{ css() }}
+
+    {%- if not embedded %}
+      {%- if favicon %}
+      <link rel="shortcut icon" href="{{ pathto('_static/revealjs/' + favicon, 1) }}"/>
+      {%- endif %}
+    {%- endif %}
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if(window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '{{ pathto('_static/revealjs/css/print/pdf.css', 1) }}';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="{{ pathto('_static/revealjs/lib/js/html5shiv.js', 1) }}"></script>
+    <![endif]-->
+
+    {%- for scriptfile in script_files %}
+    {%- if scriptfile not in ('_static/jquery.js', '_static/underscore.js', '_static/doctools.js') %}
+      <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+    {%- endif %}
+    {%- endfor %}
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        {% block body %}{% endblock %}
+      </div>
+    </div>
+    {{ script() }}
+    <script>
+
+      // change DOM for reveal.js
+      $("div.section h1").remove();
+      var content = $("div.section").html();
+      $("div.section").remove();
+      $("div.slides").html(content);
+
+      Reveal.initialize({
+        width: {{ revealjs_config_width or 960 }},
+        height: {{ revealjs_config_height or 700 }},
+
+        margin: {{ revealjs_config_margin or 0.1}},
+
+        minScale: {{ revealjs_config_min_scale or 0.2}},
+        maxScale: {{ revealjs_config_max_scale or 1.5}},
+
+        // Display controls in the bottom right corner
+        controls: {{ revealjs_config_controls|lower or "true"}},
+        // Display a presentation progress bar
+        progress: {{ revealjs_config_progress|lower or "true"}},
+        // Push each slide change to the browser history
+        history: {{ revealjs_config_history|lower or "false"}},
+        // Vertical centering of slides
+        center: {{ revealjs_config_center|lower or "true"}},
+        // Enable keyboard shortcuts for navigation
+        keyboard : {{ revealjs_config_keyboard|lower or "true"}},
+        // Enable the slide overview mode
+        overview: {{ revealjs_config_overview|lower or "true"}},
+        // Enables touch navigation on devices with touch input
+        touch: {{ revealjs_config_touch|lower or "true"}},
+        // Loop the presentation
+        loop: {{ revealjs_config_loop|lower or "true"}},
+        // Change the presentation direction to be RTL
+        rtl: {{ revealjs_config_rtl|lower or "false"}},
+        // Turns fragments on and off globally
+        fragments: {{ revealjs_config_fragments|lower or "true"}},
+        // Number of milliseconds between automatically proceeding to the
+      	// next slide, disabled when set to 0, this value can be overwritten
+      	// by using a data-autoslide attribute on your slides
+        autoSlide: {{ revealjs_config_auto_slide|lower or 0}},
+        // Enable slide navigation via mouse wheel
+        mouseWheel: {{ revealjs_config_mouse_wheel|lower or "false"}},
+        // Opens links in an iframe preview overlay
+        previewLinks: {{ revealjs_config_preview_links|lower or "false"}},
+        // Transition speed  // default/fast/slow
+        transitionSpeed: "{{ revealjs_config_transition_speed or 'default'}}",
+        // Transition style for full page slide backgrounds  // none/fade/slide/convex/concave/zoom
+        backgroundTransition: "{{ revealjs_config_background_transition or 'fade'}}",
+        // Display the page number of the current slide
+        slideNumber: {{ revealjs_config_slide_number|lower or "false"}},
+        // Flags if the presentation is running in an embedded mode,
+      	// i.e. contained within a limited portion of the screen
+        embedded: {{ revealjs_config_embedded|lower or "false"}},
+        // Stop auto-sliding after user input
+        autoSlideStoppable: {{ revealjs_config_auto_slide_stoppable|lower or "true"}},
+        // Hides the address bar on mobile devices
+        hideAddressBar: {{ revealjs_config_hide_address_bar|lower or "true"}},
+        // Parallax background image // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+        parallaxBackgroundImage: "{{ revealjs_config_parallax_background_image or ''}}",
+        // Parallax background size // CSS syntax, e.g. "2100px 900px"
+        parallaxBackgroundSize: "{{ revealjs_config_parallax_background_size or '' }}",
+
+        focusBodyOnPageVisiblityChange: {{ revealjs_config_focus_body_on_page_visibility_change|lower or "true" }},
+        // Number of slides away from the current that are visible
+        viewDistance: {{ revealjs_config_view_distance or 3}},
+        // Transition style // none/fade/slide/convex/concave/zoom
+        transition: Reveal.getQueryHash().transition || "{{ revealjs_config_transition or 'fade' }}",
+
+        {% if revealjs_config_multiplex %}
+        multiplex: {
+            {%- for k, v in revealjs_config_multiplex.items() -%}
+            {%- if v %}
+                {{ k }}: "{{ v }}"{%- if not loop.last %},{% endif -%}
+            {% endif -%}
+            {% endfor %}
+        },
+        {% endif -%}
+        {%- if revealjs_config_leap %}
+        leap: {
+            {% for k, v in revealjs_config_leap.items() -%}
+                {% if k in ('autoCenter', 'naturalSwipe') -%}
+                    {{ k }}: {{ v|lower }}{% if not loop.last -%},{% endif %}
+                {% elif k in ('pointerColor') -%}
+                    {{ k }}: "{{ v }}"{% if not loop.last -%},{% endif %}
+                {% else -%}
+                    {{ k }}: {{ v }}{% if not loop.last -%},{% endif %}
+                {% endif -%}
+            {% endfor -%}
+        },
+        {% endif %}
+        {%- if revealjs_config_math  %}
+        math: {
+            {% for k, v in revealjs_config_math.items() -%}
+                {{ k }}: "{{ v }}"{%- if not loop.last %},{% endif -%}
+            {% endfor -%}
+        },
+        {% endif %}
+
+        dependencies: [
+           { src: '{{ pathto('_static/revealjs/lib/js/classList.js', 1) }}', condition: function() { return !document.body.classList; } },
+           { src: '{{ pathto('_static/revealjs/plugin/markdown/marked.js', 1) }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+           { src: '{{ pathto('_static/revealjs/plugin/markdown/markdown.js', 1) }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+           { src: '{{ pathto('_static/revealjs/plugin/highlight/highlight.js', 1) }}', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+           { src: '{{ pathto('_static/revealjs/plugin/zoom-js/zoom.js', 1) }}', async: true, condition: function() { return !!document.body.classList; } },
+           {%- for plugin in revealjs_config_plugin_list %}
+           { src: '{{ plugin }}', async: true, condition: function() { return !!document.body.classList; } },
+           {% endfor %}
+           { src: '{{ pathto('_static/revealjs/plugin/notes/notes.js', 1) }}', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+    {% if revealjs_config_customjs  -%}
+    <script src="{{ pathto('_static/revealjs/' + revealjs_config_customjs, 1) }}"></script>
+    {% endif  %}
+  </body>
+</html>
