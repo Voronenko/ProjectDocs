@@ -202,6 +202,10 @@ templates_path = [
 	projectdocs_slides.get_html_templates_path()
 ]
 
+source_parsers = {
+    '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
 # The suffix(es) of source filenames.
 source_suffix = '.rst'
 

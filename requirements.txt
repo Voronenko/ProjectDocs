@@ -1,28 +1,34 @@
-# Sphinx documentation generator requirements
-# High-level requirements (FIXME: make this a distribute/setuptools package?):
-#  - Sphinx
-#  - sphinx-rtd-theme
-#  - cloud-sptheme
-Babel==2.2.0
-Jinja2==2.8
-MarkupSafe==0.23
-Pygments==2.0.2
-Sphinx==1.5.3
+actdiag==0.5.4
 alabaster==0.7.7
 arrow==0.7.0
+Babel==2.2.0
+blockdiag==1.5.3
 cloud-sptheme==1.8.3
-rst2pdf==0.91
+CommonMark==0.5.4
 docutils==0.12
+funcparserlib==0.3.6
 humanize==0.5.1
+imagesize==1.0.0
+Jinja2==2.8
+MarkupSafe==0.23
+nwdiag==1.0.4
+Pillow==5.0.0
+Pygments==2.0.2
+python-dateutil==2.7.0
 pytz==2015.7
+recommonmark==0.4.0
+reportlab==3.4.0
 requests==2.9.1
+rst2pdf==0.91
+seqdiag==0.9.5
 six==1.10.0
 snowballstemmer==1.2.1
+Sphinx==1.5.3
 sphinx-rtd-theme==0.1.9
-wsgiref==0.1.2
-sphinxcontrib-blockdiag==1.5.5
-sphinxcontrib-seqdiag==0.8.5
-sphinxcontrib-nwdiag==0.9.5
 sphinxcontrib-actdiag==0.8.5
+sphinxcontrib-blockdiag==1.5.5
+sphinxcontrib-nwdiag==0.9.5
 sphinxcontrib-plantuml==0.8.1
+sphinxcontrib-seqdiag==0.8.5
+webcolors==1.8.1
 Werkzeug==0.12.2
