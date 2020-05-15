@@ -5,7 +5,7 @@ Known issues:
 
 Most likely you are hitting:
 
-### ubuntu 14.04,
+### ubuntu ,
 
 error  ValueError: --enable-jpeg requested but jpeg not found, aborting
 
@@ -94,9 +94,8 @@ local setup
 
 You would need:
 
-number of languages:
 
-- python 2.7 , virtualenv, make
+- python 3.7 , pipenv, make
 - java 6-7-8 for plantUML
 
 

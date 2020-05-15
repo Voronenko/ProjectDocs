@@ -2,7 +2,7 @@
 
   install_dir: /var/www/project_docs
 
-  deploy_user: "{{ansible_user_id}}"
+  deploy_user: "{{ ansible_user_id }}"
 
 #  Uncomment for jenkins based deploy
 #  jenkins_user: SET EXTERNALLY
@@ -23,10 +23,10 @@
 #      gitlabstage: build,
       nginx: {
         name: "docs",
-        root: "{{install_dir}}/docs/build",
+        root: "{{ install_dir }}/docs/build",
         app_domain: "docs.companyname.local"
         }
     }
 
   project_sites:
-    - "{{project_docs}}"
+    - "{{ project_docs }}"

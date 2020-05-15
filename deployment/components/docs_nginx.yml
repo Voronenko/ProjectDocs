@@ -8,7 +8,7 @@
     become: yes
 
   - name: Nginx | configure web startup
-    template: src="{{root_dir}}/components/templates/nginx/site.conf.j2" dest="/etc/nginx/sites-available/{{item.nginx.name}}.conf"
+    template: src="{{ root_dir }}/components/templates/nginx/site.conf.j2" dest="/etc/nginx/sites-available/{{ item.nginx.name }}.conf"
     when: item.nginx is defined and item.nginx.template is not defined
     with_items: "{{ project_sites }}"
     become: yes
@@ -18,7 +18,7 @@
 
 
   - name: Nginx | Enable sites
-    command: ln -fs /etc/nginx/sites-available/{{item.nginx.name}}.conf /etc/nginx/sites-enabled/{{item.nginx.name}}.conf creates=/etc/nginx/sites-enabled/{{item.nginx.name}}.conf
+    command: ln -fs /etc/nginx/sites-available/{{ item.nginx.name }}.conf /etc/nginx/sites-enabled/{{ item.nginx.name }}.conf creates=/etc/nginx/sites-enabled/{{ item.nginx.name }}.conf
     when: item.nginx is defined and item.nginx.template is not defined
     with_items: "{{ project_sites }}"
     become: yes

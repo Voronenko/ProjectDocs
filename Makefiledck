@@ -1,6 +1,6 @@
 # Convenience makefile to set up the environment and build the documentation
 
-python = python2.7
+python = python3.6
 HOSTUSER := $(USER_ID)
 HOSTGROUP := $(GROUP_ID)
 

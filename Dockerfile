@@ -1,4 +1,4 @@
-FROM softasap/alpine:full
+FROM python:3.6.8-alpine3.8
 MAINTAINER Vyacheslav Voronenko <git@voronenko.info>
 
 env USER_ID 1000  # to correctly remap user rights
@@ -22,16 +22,24 @@ RUN chmod +x /usr/bin/plantuml
 # Sphinx
 COPY requirements.txt /requirements.txt
 
-RUN  apk add --no-cache python && \
-     apk add --no-cache build-base && \
-     apk add --no-cache python-dev && \
-     apk add --no-cache git && \
-     apk add --no-cache zlib-dev && \
+RUN  apk add --no-cache zlib-dev && \
      apk add --no-cache g++ && \
      apk add --no-cache libjpeg-turbo-dev && \
      apk add --no-cache musl-dev && \
-     apk add --update bash && \
-     python -m ensurepip && \
-     rm -r /usr/lib/python*/ensurepip && \
-     pip install -r /requirements.txt && \
+     pip3 install -r /requirements.txt && \
      rm -r /root/.cache
+
+
+#RUN  apk add --no-cache python3 && \
+#     apk add --no-cache build-base && \
+#     apk add --no-cache python-dev && \
+#     apk add --no-cache git && \
+#     apk add --no-cache zlib-dev && \
+#     apk add --no-cache g++ && \
+#     apk add --no-cache libjpeg-turbo-dev && \
+#     apk add --no-cache musl-dev && \
+#     apk add --update bash && \
+#     python3 -m ensurepip && \
+#     rm -r /usr/lib/python*/ensurepip && \
+#     pip3 install -r /requirements.txt && \
+#     rm -r /root/.cache
