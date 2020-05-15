@@ -10,8 +10,6 @@
 from datetime import datetime
 import sphinx.environment
 from docutils.utils import get_source_line
-import ablog
-
 # custom builders
 import os
 import sys
@@ -19,6 +17,8 @@ sys.path.append(os.path.abspath('../code/doc_builders'))
 sys.path.append(os.path.abspath('../code/extensions'))
 # /custom builders
 
+import ablog
+import projectdocs_slides
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -51,7 +51,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates', ablog.get_html_templates_path()]
+templates_path = ['_templates', ablog.get_html_templates_path(), projectdocs_slides.get_html_templates_path()]
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -169,7 +169,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path(),os.path.abspath('./_th
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['_static', '../code/extensions/projectdocs_slides/static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
