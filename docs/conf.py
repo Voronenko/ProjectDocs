@@ -10,36 +10,48 @@
 from datetime import datetime
 import sphinx.environment
 from docutils.utils import get_source_line
+import ablog
 
 # custom builders
-import os, sys
+import os
+import sys
 sys.path.append(os.path.abspath('../code/doc_builders'))
+sys.path.append(os.path.abspath('../code/extensions'))
 # /custom builders
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.append(os.path.abspath('.'))
+# sys.path.append(os.path.abspath('.'))
 
 # -- General configuration ----------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
-    'sphinx.ext.autodoc', 'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx', 'sphinx.ext.todo',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
     'sphinx.ext.viewcode',
-    'sphinxcontrib.blockdiag', 'sphinxcontrib.actdiag', 'sphinxcontrib.seqdiag', 'sphinxcontrib.nwdiag', 'sphinxcontrib.rackdiag', 'sphinxcontrib.packetdiag',
-# comment if you don't have in the system
+    'sphinxcontrib.blockdiag',
+    'sphinxcontrib.actdiag',
+    'sphinxcontrib.seqdiag',
+    'sphinxcontrib.nwdiag',
+    'sphinxcontrib.rackdiag',
+    'sphinxcontrib.packetdiag',
+    # comment if you don't have in the system
     'sphinxcontrib.plantuml',
     'cloud_sptheme.ext.table_styling',
-    'rst2pdf.pdfbuilder'
+    'rst2pdf.pdfbuilder',
+    'ablog',
+    'projectdocs_slides'
 #    'mobi'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_templates', ablog.get_html_templates_path()]
 
 # The suffix of source filenames.
 source_suffix = '.rst'
