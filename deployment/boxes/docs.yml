@@ -3,18 +3,18 @@
 
   vars:
     # prudentia_dir -> is passed in the cmd line
-    - root_dir: "{{playbook_dir}}/../"
+    - root_dir: "{{ playbook_dir }}/../"
     - env: staging
 
   vars_files:
-    - '{{prudentia_dir}}/vars/global.yml'
+    - '{{ prudentia_dir }}/vars/global.yml'
     - ./common_vars.yml
 
   pre_tasks:
     - name: Include environment related variables
       include_vars: "{{ item }}"
       with_first_found:
-       - "{{env}}_vars.yml"
+       - "{{ env }}_vars.yml"
        - "local_vars.yml"
 
   roles:
@@ -24,9 +24,9 @@
 
   tasks:
 
-    - include: "{{root_dir}}/components/docs_artifact_gitlab.yml"
+    - include: "{{ root_dir }}/components/docs_artifact_gitlab.yml"
 
-    - include: "{{root_dir}}/components/docs_artifact_jenkins.yml"
+    - include: "{{ root_dir }}/components/docs_artifact_jenkins.yml"
       when: jenkins_user is defined
 
-    - include: "{{root_dir}}/components/docs_nginx.yml"
+    - include: "{{ root_dir }}/components/docs_nginx.yml"

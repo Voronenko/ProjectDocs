@@ -4,6 +4,7 @@
 _buildinfo.txt
 *.tgz
 
+/.venv/
 /p-env/
 docs/out/*
 out/*

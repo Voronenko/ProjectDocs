@@ -7,20 +7,20 @@
       - update
  
   - name: Project Docs Deploy | configure base dir
-    file: path="{{install_dir}}/{{item.name}}" state=directory  mode="u=rwx,g=rx,o=rx" owner="{{ansible_user_id}}" group="www-data"
+    file: path="{{ install_dir }}/{{ item.name }}" state=directory  mode="u=rwx,g=rx,o=rx" owner="{{ ansible_user_id }}" group="www-data"
     with_items: "{{ project_sites }}"
     become: yes
     tags:
       - update
 
   - name: Project Docs Deploy | configure www dir
-    file: path="{{project_docs.nginx.root}}" state=directory  mode="u=rwx,g=rx,o=rx" owner="{{ansible_user_id}}" group="www-data"
+    file: path="{{ project_docs.nginx.root }}" state=directory  mode="u=rwx,g=rx,o=rx" owner="{{ ansible_user_id }}" group="www-data"
     become: yes
     tags:
       - update
 
   - name: Project Docs Deploy | Template gitlab artifact downloader
-    template: src="{{root_dir}}/components/templates/gitlab/get_artifact.sh.j2" dest="{{install_dir}}/get_artifact.sh" mode="u=rwx,g=rx,o=rx"
+    template: src="{{ root_dir }}/components/templates/gitlab/get_artifact.sh.j2" dest="{{ install_dir }}/get_artifact.sh" mode="u=rwx,g=rx,o=rx"
     when: gitlabtoken is defined
     tags:
       - update
@@ -36,29 +36,29 @@
     shell: ./get_artifact.sh
     when: item.gitlabproject is defined
     args:
-      chdir: "{{install_dir}}"
+      chdir: "{{ install_dir }}"
     with_items: "{{ project_sites }}"
     environment:
           BASE_URL: "{{gitlabbaseurl | default('https://companyname.githost.io')}}"
-          PRIVATE_TOKEN: "{{gitlabtoken }}"
-          STAGE: "{{item.gitlabstage | default('build')}}"
-          PROJECT: "{{item.gitlabproject}}"
-          REF: "{{item.version | default('master') }}"
-          OUT_FILE: "{{install_dir}}/{{item.name}}/{{item.name}}.zip"
+          PRIVATE_TOKEN: "{{ gitlabtoken }}"
+          STAGE: "{{ item.gitlabstage | default('build') }}"
+          PROJECT: "{{ item.gitlabproject }}"
+          REF: "{{ item.version | default('master') }}"
+          OUT_FILE: "{{ install_dir }}/{{ item.name }}/{{ item.name }}.zip"
     tags:
       - update
 
   - name: Project Docs Deploy | Unpack gitlab artifacts main archieve
-    unarchive: src="{{install_dir}}/{{item.name}}/{{item.name}}.zip" dest="{{install_dir}}/{{item.name}}" copy=no
+    unarchive: src="{{ install_dir }}/{{ item.name }}/{{ item.name }}.zip" dest="{{ install_dir }}/{{ item.name }}" copy=no
     when: item.gitlabproject is defined
     with_items: "{{ project_sites }}"
     tags:
       - update
 
   - name: Project Docs Deploy | Execute artifact unpackaging logic
-    shell: "./unpackage.sh {{project_docs.nginx.root}}"
+    shell: "./unpackage.sh {{ project_docs.nginx.root }}"
     args:
-      chdir: "{{install_dir}}/{{item.name}}"
+      chdir: "{{ install_dir }}/{{ item.name }}"
     when: item.gitlabproject is defined
     with_items: "{{ project_sites }}"
     tags:

@@ -34,8 +34,8 @@ extensions = [
 # comment if you don't have in the system
     'sphinxcontrib.plantuml',
     'cloud_sptheme.ext.table_styling',
-    'rst2pdf.pdfbuilder',
-    'mobi'
+    'rst2pdf.pdfbuilder'
+#    'mobi'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -101,7 +101,7 @@ pygments_style = 'sphinx'
 
 def _warn_node(self, msg, node, **kwargs):
     skip = False
-    print "Hello world!"
+    print ("Hello world!")
     if msg.startswith('nonlocal image URI found:'):
         skip = True
     if "directive 'table' is already registered" in msg:

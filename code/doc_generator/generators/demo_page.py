@@ -34,5 +34,5 @@ class DemoPageGenerator(AbstractTemplatedGenerator):
     def generate(self):
         content = self.build_repo_list_page()
 
-        with open(self.demo_page, 'wb+') as f:
+        with open(self.demo_page, 'w+') as f:
             f.write(content)

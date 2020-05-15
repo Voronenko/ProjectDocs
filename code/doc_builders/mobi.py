@@ -399,7 +399,7 @@ class MobiBuilder(StandaloneHTMLBuilder):
         fn = path.join(outdir, outname)
         try:
             os.mkdir(path.dirname(fn))
-        except OSError, err:
+        except OSError as err:
             if err.errno != EEXIST:
                 raise
         f = codecs.open(path.join(outdir, outname), 'w', 'utf-8')
