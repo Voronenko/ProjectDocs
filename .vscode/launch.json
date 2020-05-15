@@ -9,8 +9,8 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": false,
-            "pythonPath": "${workspaceRoot}/p-env/bin/python",
-            "program": "${workspaceRoot}/p-env/bin/sphinx-build",
+            "pythonPath": "${workspaceRoot}/.venv/bin/python",
+            "program": "${workspaceRoot}/.venv/bin/sphinx-build",
             "cwd": "${workspaceRoot}",
             "env": {
                 "VAR1": "VALUE1"
