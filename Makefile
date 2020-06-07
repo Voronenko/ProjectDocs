@@ -19,7 +19,7 @@ preprocess_sources: docs/project_specific/*.rst.jinja2
 # NOTE: This requires you to have plantuml installed, so it's not hooked into
 # any of the standard targets. Run it on demand.
 plantuml: docs/diagrams/*.plantuml
-	plantuml -tsvg $^
+	docker/plantuml -tsvg $^
 
 
 .venv/bin/sphinx-build: .venv/bin/pip
