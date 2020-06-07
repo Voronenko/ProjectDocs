@@ -16,6 +16,7 @@ jobs:
     - name: Setup java for plantuml
       uses: actions/setup-java@v1
       with:
+        java-version: 8
         java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
         architecture: x64 # (x64 or x86) - defaults to x64
     - name: Set up Python 3.6
