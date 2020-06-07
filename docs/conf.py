@@ -209,6 +209,8 @@ html_static_path = ['_static', '../code/extensions/projectdocs_slides/static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'project-docsdoc'
 
+plantuml = 'java -jar /opt/plantuml/plantuml.jar'
+
 
 # -- Options for LaTeX output -------------------------------------------------
 
