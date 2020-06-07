@@ -27,7 +27,6 @@ jobs:
       run: |
         sudo apt install pandoc graphviz curl
         mkdir -p /opt/plantuml/ && curl -L  https://sourceforge.net/projects/plantuml/files/plantuml.jar/download > /opt/plantuml/plantuml.jar
-        echo ::add-path::$GITHUB_WORKPLACE/docker
         python -m pip install --upgrade pip
     - name: Install pipenv
       run: |
@@ -35,5 +34,6 @@ jobs:
         pipenv install --deploy --dev
     - name: Build sphinx documentation
       run: |
+        echo ::add-path::$GITHUB_WORKPLACE/docker
         plantuml -version 
         pipenv run make docs
