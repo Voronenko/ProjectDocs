@@ -1,0 +1,26 @@
+name: release
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  release:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.6
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.6
+    - name: Install dependencies
+      run: |
+        sudo apt install pandoc graphviz curl
+        mkdir -p /opt/plantuml/ && curl -L  https://sourceforge.net/projects/plantuml/files/plantuml.jar/download > /opt/plantuml/plantuml.jar
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Build sphinx documentation
+      run: |
+        make docs
