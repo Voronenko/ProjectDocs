@@ -27,7 +27,7 @@ jobs:
       run: |
         sudo apt install pandoc graphviz curl
         mkdir -p /opt/plantuml/ && curl -L  https://sourceforge.net/projects/plantuml/files/plantuml.jar/download > /opt/plantuml/plantuml.jar
-        cp docker/plantuml /usr/bin/plantuml
+        cp docker/plantuml /usr/bin
         chmod +x /usr/bin/plantuml	
         python -m pip install --upgrade pip
     - name: Install pipenv
