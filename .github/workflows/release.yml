@@ -35,4 +35,5 @@ jobs:
         pipenv install --deploy --dev
     - name: Build sphinx documentation
       run: |
+        plantuml -version 
         pipenv run make docs
