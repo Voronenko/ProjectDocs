@@ -9,7 +9,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
-      PIPENV_VENV_IN_PROJECT=true
+      PIPENV_VENV_IN_PROJECT: true
     steps:
 
     - uses: actions/checkout@v1
