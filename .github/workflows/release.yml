@@ -13,6 +13,11 @@ jobs:
     steps:
 
     - uses: actions/checkout@v1
+    - name: Setup java for plantuml
+    - uses: actions/setup-java@v1
+      with:
+        java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
+        architecture: x64 # (x64 or x86) - defaults to x64
     - name: Set up Python 3.6
       uses: actions/setup-python@v1
       with:
@@ -21,7 +26,8 @@ jobs:
       run: |
         sudo apt install pandoc graphviz curl
         mkdir -p /opt/plantuml/ && curl -L  https://sourceforge.net/projects/plantuml/files/plantuml.jar/download > /opt/plantuml/plantuml.jar
-        cp docker/plantuml /usr/bin/plantuml && chmod +x /usr/bin/plantuml	
+        cp docker/plantuml /usr/bin/plantuml
+        chmod +x /usr/bin/plantuml	
         python -m pip install --upgrade pip
     - name: Install pipenv
       run: |
